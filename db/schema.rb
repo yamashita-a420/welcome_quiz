@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_070818) do
+ActiveRecord::Schema.define(version: 2022_05_02_080747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "choices", force: :cascade do |t|
+    t.string "content", null: false
+    t.integer "correct_answer", default: 0, null: false
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_choices_on_question_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "photo"
@@ -36,5 +45,6 @@ ActiveRecord::Schema.define(version: 2022_05_02_070818) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "choices", "questions"
   add_foreign_key "questions", "users"
 end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @create_question.photo %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @create_question.content %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @create_question.comment %>
+</p>
+
+<p>
+  <strong>Leve:</strong>
+  <%= @create_question.leve %>
+</p>
+
+<%= link_to 'Edit', edit_create_question_path(@create_question) %> |
+<%= link_to 'Back', create_questions_path %>

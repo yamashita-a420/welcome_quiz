@@ -1,5 +1,6 @@
-<h1>Login</h1>
+<h1><%= t('.title') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', users_path %>
+<%= link_to t('.to_register_page'), new_user_path %>
+<%= link_to t('.password_forget'), '#' %>

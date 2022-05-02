@@ -1,0 +1,37 @@
+<%= form_with(model: create_question) do |form| %>
+  <% if create_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(create_question.errors.count, "error") %> prohibited this create_question from being saved:</h2>
+
+      <ul>
+        <% create_question.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leve %>
+    <%= form.text_field :leve %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

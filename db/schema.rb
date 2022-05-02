@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_080747) do
+ActiveRecord::Schema.define(version: 2022_05_02_114507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challengers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "message", default: "クイズ楽しかったよ！", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "choices", force: :cascade do |t|
     t.string "content", null: false

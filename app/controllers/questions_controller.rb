@@ -2,37 +2,40 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show edit update destroy ]
 
   def index
-    @questions = Question.all
+    @questions = Question.all.includes(:choice).order(created_at: :desc)
+    @choices = @questions.choices
   end
-
-  def show; end
 
   def new
     @question = Question.new
   end
 
-  def edit; end
-
   def create
-    @question = Question.new(question_params)
+    @question = current_user.questions.build(question_params)
     if @question.save
       redirect_to question_url(@question), notice: "question was successfully created."
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
+
+  def show
+    @choices = @questions.choices.order(created_at: :desc)
+  end
+
+  def edit; end
 
   def update
     if @question.update(question_params)
       redirect_to question_url(@question), notice: "Create question was successfully updated."
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
   def destroy
     @question.destroy
-    redirect_to create_questions_url, notice: "Create question was successfully destroyed."
+    redirect_to questions_url, notice: "Create question was successfully destroyed."
   end
 
   private
@@ -42,6 +45,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:photo, :content, :comment, :leve)
+    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level)
   end
 end

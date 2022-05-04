@@ -2,8 +2,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show edit update destroy ]
 
   def index
-    @questions = Question.all.includes(:choice).order(created_at: :desc)
-    @choices = @questions.choices
+    @questions = Question.joins(:choice).select_all.order(created_at: :desc)
   end
 
   def new
@@ -20,7 +19,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @choices = @questions.choices.order(created_at: :desc)
+    @choices = @question.choice.order(created_at: :desc)
   end
 
   def edit; end

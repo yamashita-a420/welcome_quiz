@@ -20,3 +20,6 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  questions:
+    index:
+      no_result: '質問がありません'

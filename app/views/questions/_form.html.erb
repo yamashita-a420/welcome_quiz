@@ -1,37 +1,26 @@
-<%= form_with(model: create_question) do |form| %>
-  <% if create_question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(create_question.errors.count, "error") %> prohibited this create_question from being saved:</h2>
-
-      <ul>
-        <% create_question.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo %>
+<%= form_with model: @question do |f| %>
+  <%= render 'shared/error_message', object: @question %>
+  <div class="form-group">
+    <%= f.label :photo %></br>
+    <%= f.file_field :photo, onchange: 'previewImage()', class: 'form-control mb-3', accept: 'image/*' %>
+    <%= f.hidden_field :photo_cache %>
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+  <div class='mt-3 mb-3'>
+    <%= image_tag @question.photo.url,
+                  id: 'preview',
+                  size: '300x200' %>
   </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :leve %>
-    <%= form.text_field :leve %>
+  <div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_field :comment, class: 'form-control' %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= f.label :level %>
+    <%= f.text_field :level, class: 'form-control' %>
   </div>
+  <%= f.submit class:'btn btn-primary' %>
 <% end %>

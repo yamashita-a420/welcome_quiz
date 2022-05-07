@@ -1,1 +1,6 @@
-<p class="card-text"><%= @choices %></p>
+<p class="card-text">
+  <% @choices.each do |choice| %>
+    <%= choice.content %>
+    <%= choice.correct_answer %>
+  <% end %>
+</p>

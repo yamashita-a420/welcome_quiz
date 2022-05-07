@@ -2,7 +2,9 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show edit update destroy ]
 
   def index
-    @questions = Question.joins(:choice).select_all.order(created_at: :desc)
+    @questions = Question.left_outer_joins(:choices).select('questions.*, choices.content').order(created_at: :desc)
+    # 関連付けメソッドのchoicesが使えないとでる。なぜかわからない
+    # @choices = @questions.choices
   end
 
   def new
@@ -19,7 +21,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @choices = @question.choice.order(created_at: :desc)
+    @choices = @question.choices.includes(:user).order(created_at: :desc)
   end
 
   def edit; end
@@ -40,7 +42,7 @@ class QuestionsController < ApplicationController
   private
   
   def set_question
-    @question = Question.find(params[:id])
+    @question = current_user.questions.find(params[:id])
   end
 
   def question_params

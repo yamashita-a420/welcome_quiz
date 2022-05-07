@@ -14,3 +14,13 @@ ja:
         content: '質問'
         comment: 'コメント'
         level: '難易度'
+  enum:
+    question:
+      level:
+        one: '★'
+        twe: '★★'
+        three: '★★★'
+    choice:
+      correct_answer:
+        incorrect: '不正解'
+        correct: '正解'

@@ -1,4 +1,4 @@
-<%= form_with model: choice, url: [question, choice], id: new_choice do |f| %>
+<%= form_with model: choice, url: question_choices_path(question, choice) do |f| %>
   <div class="field">
     <%= f.label :content %>
     <%= f.text_field :content %>
@@ -7,5 +7,5 @@
     <%= f.label :correct_answer %>
     <%= f.number_field :correct_answer %>
   </div>
-  <%= f.submit, class: 'btn btn-primary' %>
+  <%= f.submit %>
 <% end %>

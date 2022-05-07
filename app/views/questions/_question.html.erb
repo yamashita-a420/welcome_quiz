@@ -11,7 +11,12 @@
                         <%= question.comment %>
                     </li>
                 </ul>
-                <%= render 'choices/choices', { choices: @questions.choices } %>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <%= t('.level', level: question.level) %>
+                    </li>
+                </ul>
+                <%#= render 'choices/choices', { choices: @choices } %>
             </div>
         </div>
     </div>

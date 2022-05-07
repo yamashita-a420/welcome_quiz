@@ -1,25 +1,37 @@
-<p>
-  <strong>Photo:</strong>
-  <div class='col-md-3'>
-    <%= image_tag @question.photo.url, class: 'card-img-top img-fluid', size: '300x200' %>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+    <h1><%= t('.title') %></h1>
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-3'>
+              <%= image_tag @question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
+            </div>
+            <div class='col-md-9'>
+              <p>
+                <%= @question.content %>
+              </p>
+            <p>
+              <%= @question.comment %>
+            </p>
+
+            <p>
+              <%= t('.level', level: @question.level) %>
+            </p>
+          </div>
+          <div class="js-table-choice">
+            <%= render 'choices/form', { question: @question, choice: @choice } %>
+          </div>
+          <div class="js-table-choice">
+            <%= render 'choices/choices', { choices: @choices } %>
+          </div>
+          <%= link_to 'Edit', edit_question_path(@question) %>
+          <%= link_to 'Destroy', question_path(@question), method: :delete %>
+          <%= link_to 'Back', questions_path %>
+        </div>
+      </article>
+    </div>
   </div>
-</p>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @question.content %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @question.comment %>
-</p>
-
-<p>
-  <strong>Level:</strong>
-  <%= @question.level %>
-</p>
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Destroy', question_path(@question), method: :delete %> |
-<%= link_to 'Back', questions_path %>

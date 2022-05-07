@@ -22,4 +22,8 @@ ja:
       success: 'ログアウトしました'
   questions:
     index:
+      title: 'Question Index'
       no_result: '質問がありません'
+      level: "難易度：%{level}"
+    show:
+      title: 'Question'

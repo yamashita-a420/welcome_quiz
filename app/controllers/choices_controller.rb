@@ -26,7 +26,7 @@ class ChoicesController < ApplicationController
   private
 
   def set_choice
-    @comment = current_user.choices.find(params[:id])
+    @choice = current_user.choices.find(params[:id])
   end
 
   def choice_params

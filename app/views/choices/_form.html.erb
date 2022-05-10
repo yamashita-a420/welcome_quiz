@@ -1,4 +1,4 @@
-<%= form_with model: choice, url: question_choices_path(question, choice) do |f| %>
+<%= form_with model: choice, url: [question, choice], local: true do |f| %>
   <div class="field">
     <%= f.label :content %>
     <%= f.text_field :content %>

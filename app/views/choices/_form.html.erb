@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <%= f.label :correct_answer %>
-    <%= f.number_field :correct_answer %>
+    <%= f.select :correct_answer, Choice.correct_answers.keys %>
   </div>
   <%= f.submit %>
 <% end %>

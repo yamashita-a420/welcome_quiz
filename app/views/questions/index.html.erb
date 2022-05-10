@@ -1,33 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Questions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Photo</th>
-      <th>Content</th>
-      <th>Comment</th>
-      <th>Leve</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= question.photo %></td>
-        <td><%= question.content %></td>
-        <td><%= question.comment %></td>
-        <td><%= question.leve %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Question', new_question_path %>
+<% content_for(:title, t('.title')) %>
+<h1><%= t('.title') %></h1>
+<div class="container pt-3">
+  <!-- 質問一覧 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <% if @questions.present? %>
+          <%= render @questions %>
+        <% else %>
+          <p><%= t('.no_result') %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

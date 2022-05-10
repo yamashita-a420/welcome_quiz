@@ -1,32 +1,11 @@
-<%= form_with(model: choice) do |form| %>
-  <% if choice.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(choice.errors.count, "error") %> prohibited this choice from being saved:</h2>
-
-      <ul>
-        <% choice.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_with model: choice, url: [question, choice], local: true do |f| %>
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
   </div>
-
   <div class="field">
-    <%= form.label :correct_answer %>
-    <%= form.number_field :correct_answer %>
+    <%= f.label :correct_answer %>
+    <%= f.select :correct_answer, Choice.correct_answers.keys %>
   </div>
-
-  <div class="field">
-    <%= form.label :question_id %>
-    <%= form.text_field :question_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.submit %>
 <% end %>

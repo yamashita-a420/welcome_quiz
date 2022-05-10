@@ -1,0 +1,22 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+    <div id="question-id-<%= question.id %>">
+        <div class="card text-center">
+            <%= image_tag question.photo_url, class: 'card-img-top', size: '300x200' %>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= link_to question.content, question_path(question) %>
+                </h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <%= question.comment %>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <%= Question.human_attribute_name(:level) %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -62,7 +62,10 @@
 ゲストに楽しんでもらえるのではないかと考えたためです。
 
 # スケジュール
-- README・画面遷移図・ER図：〜5/15(日)
+- README・画面遷移図・ER図：〜5/18(水)
 - メイン機能実装：〜5/29(日)
 - β版をRUNTEQ内リリース（MVP）：〜5/30(月)
 - 本番リリース：〜6/13(月)
+
+# 画面遷移図
+https://www.figma.com/file/fQTXVJNUrQCDqXH4WXa2mL/%E8%B3%AA%E5%95%8F?node-id=0%3A1

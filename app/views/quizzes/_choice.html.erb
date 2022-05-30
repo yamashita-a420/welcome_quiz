@@ -1,0 +1,5 @@
+<p class="card-text">
+  <% @choices.each do |choice| %>
+    <%= link_to choice.content, quiz_path, class: 'btn btn-default' %>
+  <% end %>
+</p>

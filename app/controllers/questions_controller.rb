@@ -23,7 +23,7 @@ class QuestionsController < ApplicationController
 
   def show
     @choice = Choice.new
-    @choices = @question.choices.includes(:user).order(created_at: :desc)
+    @choices = @question.choices.order(created_at: :desc)
   end
 
   def edit; end

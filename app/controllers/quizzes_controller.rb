@@ -5,8 +5,8 @@ class QuizzesController < ApplicationController
 
   def show
     loop do
-      break if @questions.empty?
-      @question = @questions.pop
+      break if questions.empty?
+      @question = questions.pop
       @choices = @question.choices.order(created_at: :desc)
     end
   end
@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
   private
 
   def set_questions
-    @questions = Question.all.sample(3)
-    @question = @questions.pop
+    questions = Question.all.sample(3)
+    @question = questions.pop
   end
 end

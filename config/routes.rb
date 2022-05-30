@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :questions do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
-  resource :quiz
+  resources :quizzes, only: %i[index show]
   resources :guests
 end

@@ -2,7 +2,7 @@
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('.title') %></h1>
-      <%= render 'quizzes/question', question: @question %>
+      <%= render partial: 'quizzes/question', collection: @questions %>
     </div>
   </div>
 </div>

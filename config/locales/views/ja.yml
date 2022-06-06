@@ -32,3 +32,8 @@ ja:
       button: 'スタート'
     show:
       title: 'Welcome Quiz'
+  messages:
+    new:
+      thanks_message: 'クイズにご参加いただきありがとうございました！'
+      enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'
+      message_please: 'よろしければ主催へひとこと'

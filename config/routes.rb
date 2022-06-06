@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post 'login', to: "user_sessions#create"
   post 'logout', to: 'user_sessions#destroy'
   get 'result', to: 'messages#new'
+  post 'result', to: 'messages#create'
 
   resources :users, only: %i[new create]
   resources :questions do

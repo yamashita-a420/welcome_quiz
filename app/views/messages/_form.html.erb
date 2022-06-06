@@ -1,0 +1,14 @@
+<%= form_with model: message, url: result_path, local: true do |f| %>
+  <%= render 'shared/error_message', object: message %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :message %>
+    <%= f.text_field :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

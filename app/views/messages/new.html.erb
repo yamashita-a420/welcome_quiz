@@ -1,0 +1,18 @@
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <%= render 'messages/question', question: @first_question %>
+      <%= render 'messages/question', question: @second_question %>
+      <%= render 'messages/question', question: @third_question %>
+    </div>
+  </div>
+</div>
+
+<p><%= t('.thanks_message') %></p>
+<p><%= t('.enjoy_message') %></p>
+<p><%= t('.message_please') %></p>
+
+<%= render 'form', message: @message %>
+
+<%= link_to 'Back', quizzes_path %>

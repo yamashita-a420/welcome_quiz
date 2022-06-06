@@ -1,0 +1,7 @@
+<p class="card-text">
+  <%= form_with model: @third_question, url: @third_question_path(@third_question), method: :get, locale:true do |f| %>
+    <%= f.hidden_field :second_question, :value => @second_question.id %>
+    <%= f.hidden_field :first_question, :value => @first_question.id %>
+    <%= f.submit choice.content, class: 'btn btn-info' %>
+  <% end %>
+</p>

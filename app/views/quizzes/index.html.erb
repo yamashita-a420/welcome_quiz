@@ -1,0 +1,8 @@
+<p>ようこそ！</p>
+<p>ささやかながらクイズを用意しましたので</p>
+<p>お楽しみください</p>
+<%= form_with model: @first_question, url: first_question_path(@first_question), method: :get, locale:true do |f| %>
+  <%= f.hidden_field :second_question, :value => @second_question.id %>
+  <%= f.hidden_field :third_question, :value => @third_question.id %>
+  <%= f.submit t('.button'), class: 'btn btn-info' %>
+<% end %>

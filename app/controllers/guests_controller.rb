@@ -32,7 +32,7 @@ class GuestsController < ApplicationController
 
   def destroy
     @guest.destroy
-    redirect_to guests_url, notice: "guest was successfully destroyed." }
+    redirect_to guests_url, notice: "guest was successfully destroyed."
   end
 
   private

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   post 'login', to: "user_sessions#create"
   post 'logout', to: 'user_sessions#destroy'
+  get 'result', to: 'messages#new'
 
   resources :users, only: %i[new create]
   resources :questions do
@@ -12,5 +13,4 @@ Rails.application.routes.draw do
   resource :first_question, only: %i[show]
   resource :second_question, only: %i[show]
   resource :third_question, only: %i[show]
-  resources :guests
 end

@@ -1,0 +1,22 @@
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h1 class="float-left mb-5"><%= t '.title' %></h1>
+      <%= link_to t('.create_quiz'), new_question_path %>
+      <%= link_to t('.questions'), questions_path %>
+      <%= link_to t('.quizzes'), quizzes_path %>
+      <%= link_to t('.messages_index'), messages_path %>
+      <%= link_to t('.edit'), edit_mypage_path, class: 'btn btn-success float-right' %>
+      <table class="table">
+        <tr>
+          <th scope="row"><%= User.human_attribute_name(:email) %></th>
+          <td><%= current_user.email %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= t '.name' %></th>
+          <td><%= current_user.name %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

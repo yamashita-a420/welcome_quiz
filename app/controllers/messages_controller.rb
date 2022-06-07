@@ -1,4 +1,10 @@
 class MessagesController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+
+  def index
+    @messages = current_user.messages.order(created_at: :desc)
+  end
+
   def new
     @message = Message.new
     @first_question = Question.find(params[:question][:first_question])

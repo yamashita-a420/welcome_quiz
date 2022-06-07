@@ -1,4 +1,6 @@
 class ThirdQuestionsController < ApplicationController
+  skip_before_action :require_login, only: %i[show]
+
   def show
     @third_question = Question.find(params[:format])
     @choices = @third_question.choices.order(created_at: :desc)

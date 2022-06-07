@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'logout', to: 'user_sessions#destroy'
   get 'result', to: 'messages#new'
   post 'result', to: 'messages#create'
+  get 'messages', to: 'messages#index'
 
   resources :users, only: %i[new create]
   resources :questions do
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   resource :first_question, only: %i[show]
   resource :second_question, only: %i[show]
   resource :third_question, only: %i[show]
+  resource :mypage, only: %i[show edit update]
 end

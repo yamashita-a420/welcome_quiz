@@ -2,4 +2,9 @@
 
 <%= render 'form', question: @question %>
 
-<%= link_to 'Top', root_path %>
+<!-- リンク -->
+<%= link_to t('defaults.top'), root_path %>
+<%= link_to t('defaults.mypage'), mypage_path %>
+<%= link_to t('defaults.new_question'), new_question_path %>
+<%= link_to t('defaults.quizzes'), quizzes_path %>
+<%= link_to t('defaults.preview'), '#' %>

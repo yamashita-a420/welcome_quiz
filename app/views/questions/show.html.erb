@@ -20,9 +20,9 @@
           <div class="js-table-choice">
             <%= render 'choices/choices', { choices: @choices } %>
           </div>
-          <%= link_to 'Edit', edit_question_path(@question) %>
-          <%= link_to 'Destroy', question_path(@question), method: :delete %>
-          <%= link_to 'Back', questions_path %>
+          <%= link_to t('defaults.edit'), edit_question_path(@question) %>
+          <%= link_to t('defaults.destroy'), question_path(@question), method: :delete %>
+          <%= link_to t('defaults.questions'), questions_path %>
         </div>
       </article>
     </div>

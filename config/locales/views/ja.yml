@@ -1,8 +1,21 @@
 ja:
   defaults:
+    top: 'Top'
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    edit: '編集'
+    destroy: '削除'
+    questions: '質問一覧'
+    mypage: 'マイページ'
+    new_question: '質問をつくる'
+    quizzes: 'クイズ画面'
+    preview: 'プレビュー画面'
+  static_pages:
+    top:
+      title: 'Welcome Quiz Maker'
+      welcome_message: 'ようこそ！'
+      try: '質問をつくってみる'
   users:
     new:
       title: 'ユーザー登録'
@@ -20,11 +33,19 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  mypages:
+    show:
+      title: 'マイページ'
+      create_quiz: '質問をつくる'
+      quizzes: 'クイズ画面'
+      messages_index: 'メッセージ一覧'
+      edit: 'プロフィール編集'
   questions:
     index:
       title: 'Question Index'
       no_result: '質問がありません'
       level: "難易度：%{level}"
+
     show:
       title: 'Question'
   quizzes:
@@ -33,6 +54,10 @@ ja:
     show:
       title: 'Welcome Quiz'
   messages:
+    index:
+      mypage: 'マイページ'
+      new_question: '質問をつくる'
+      quizzes: 'クイズ画面'
     new:
       thanks_message: 'クイズにご参加いただきありがとうございました！'
       enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'

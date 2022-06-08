@@ -2,7 +2,7 @@
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('.title') %></h1>
-      <h2><%= @score %></h2>
+      <h2><%= t('.score', score: @score) %></h2>
       <%= render 'messages/question', question: @first_question %>
       <%= render 'messages/question', question: @second_question %>
       <%= render 'messages/question', question: @third_question %>

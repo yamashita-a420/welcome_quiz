@@ -1,12 +1,24 @@
 <div class="container pt-3">
   <div class="row">
-    <div class="col-md-10 offset-md-1">
-      <h1 class="text-red-500 text-9xl"><%= t '.title' %></h1>
-      <%= link_to t('.create_quiz'), new_question_path %>
-      <%= link_to t('.questions'), questions_path %>
-      <%= link_to t('.quizzes'), quizzes_path %>
-      <%= link_to t('.messages_index'), messages_path %>
-      <%= link_to t('.edit'), edit_mypage_path, class: 'btn btn-success float-right' %>
+    <div class="flex flex-wrap -m-4 space-y-4">
+      <h1 class="text-neutral-500 text-3xl"><%= t '.title' %></h1>
+      <div class="flex flex-wrap -m-4 space-y-4">
+        <button class="menu-btn focus hover">
+          <%= link_to t('.create_quiz'), new_question_path %>
+        </button>
+        <button class="menu-btn focus hover">
+          <%= link_to t('.questions'), questions_path %>
+        </button>
+        <button class="menu-btn focus hover">
+          <%= link_to t('.quizzes'), quizzes_path %>
+        </button>
+        <button class="menu-btn focus hover">
+          <%= link_to t('.messages_index'), messages_path %>
+        </button>
+      </div>
+      <button class="menu-btn focus hover">
+        <%= link_to t('.edit'), edit_mypage_path %>
+      </button>
       <table class="table">
         <tr>
           <th scope="row"><%= User.human_attribute_name(:email) %></th>

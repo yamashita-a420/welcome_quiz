@@ -70,3 +70,5 @@ ja:
       thanks_message: 'クイズにご参加いただきありがとうございました！'
       enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'
       message_sent: 'メッセージ頂戴しました！ありがとうございました'
+  helpers:
+    app: 'Welcome Quiz Maker'

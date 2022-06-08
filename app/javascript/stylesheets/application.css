@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.choice-btn {
+  @apply bg-orange-500 text-white border-0 py-2 px-8 rounded text-lg;
+}
+
+.menu-btn {
+  @apply bg-orange-400 text-white border-0 py-2 px-8 m-4 rounded text-lg;
+}
+
+@layer utilities {
+  focus {
+    @apply outline-none;
+  }
+
+  hover {
+    @apply bg-yellow-600;
+  }
+}

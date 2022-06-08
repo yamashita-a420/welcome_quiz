@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'logout', to: 'user_sessions#destroy'
   get 'result', to: 'messages#new'
   post 'result', to: 'messages#create'
+  get 'result/message_sent', to: 'messages#show'
   get 'messages', to: 'messages#index'
 
   resources :users, only: %i[new create]

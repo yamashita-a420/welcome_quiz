@@ -10,6 +10,10 @@
   @apply bg-orange-400 text-white border-0 py-2 px-8 m-4 rounded text-lg;
 }
 
+.assign-form {
+  @apply input input-bordered input-primary w-full max-w-xs;
+}
+
 @layer utilities {
   focus {
     @apply outline-none;

@@ -1,11 +1,11 @@
 <%= form_with model: choice, url: [question, choice], local: true do |f| %>
   <div class="field">
     <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_field :content, class: 'assign-form' %>
   </div>
   <div class="field">
     <%= f.label :correct_answer %>
-    <%= f.select :correct_answer, Choice.correct_answers.keys %>
+    <%= f.select :correct_answer, Choice.correct_answers.keys, class: 'assign-form' %>
   </div>
-  <%= f.submit %>
+  <%= f.submit, class: "btn btn-accent" %>
 <% end %>

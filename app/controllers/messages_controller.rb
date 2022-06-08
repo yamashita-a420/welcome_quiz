@@ -14,17 +14,10 @@ class MessagesController < ApplicationController
     # 回答したchoiceの情報
     @first_choice = Choice.find(params[:question][:first_choice])
     @second_choice = Choice.find(params[:question][:second_choice])
-    #thirdがsecondと同じになってる？
+    # !!! thirdがsecondと同じになってないか？
     @third_choice = Choice.find(params[:question][:third_choice])
-    #answer = [@first_choice, @second_choice, @third_choice]
     # 正解数
-    #@score = scoring([ @first_choice, @second_choice, @third_choice ])
-    #@score = Choice.scoring(answer)
-    #@score = @first_choice.scoring + @second_choice.scoring + @third_choice.scoring
-    binding.pry
-    score = @first_choice.scoring(@first_choice)
-    binding.pry
-    @score = @first_choice.scoring(@first_choice) + @second_choice.scoring(@second_choice) + @third_choice.scoring(@third_choice)
+    @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
   end
 
   def create

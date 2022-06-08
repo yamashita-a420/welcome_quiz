@@ -64,3 +64,9 @@ ja:
       thanks_message: 'クイズにご参加いただきありがとうございました！'
       enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'
       message_please: 'よろしければ主催へひとこと'
+    show:
+      title: 'Check the answer!'
+      score: "＼%{score}問正解／"
+      thanks_message: 'クイズにご参加いただきありがとうございました！'
+      enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'
+      message_sent: 'メッセージ頂戴しました！ありがとうございました'

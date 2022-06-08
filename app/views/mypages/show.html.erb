@@ -1,8 +1,9 @@
-<div class="container pt-3">
+<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
   <div class="row">
-    <div class="flex flex-wrap -m-4 space-y-4">
-      <h1 class="text-neutral-500 text-3xl"><%= t '.title' %></h1>
-      <div class="flex flex-wrap -m-4 space-y-4">
+    <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <h1 class="ml-3 text-3xl"><%= t '.title' %></h1>
+    </div>
+      <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <button class="menu-btn focus hover">
           <%= link_to t('.create_quiz'), new_question_path %>
         </button>
@@ -16,19 +17,21 @@
           <%= link_to t('.messages_index'), messages_path %>
         </button>
       </div>
-      <button class="menu-btn focus hover">
-        <%= link_to t('.edit'), edit_mypage_path %>
-      </button>
-      <table class="table">
-        <tr>
-          <th scope="row"><%= User.human_attribute_name(:email) %></th>
-          <td><%= current_user.email %></td>
-        </tr>
-        <tr>
-          <th scope="row"><%= t '.name' %></th>
-          <td><%= current_user.name %></td>
-        </tr>
-      </table>
+      <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <button class="menu-btn focus hover">
+          <%= link_to t('.edit'), edit_mypage_path %>
+        </button>
+        <table class="table">
+          <tr>
+            <th scope="row"><%= User.human_attribute_name(:email) %></th>
+            <td><%= current_user.email %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= t '.name' %></th>
+            <td><%= current_user.name %></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>

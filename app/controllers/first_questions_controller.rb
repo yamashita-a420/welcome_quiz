@@ -2,8 +2,10 @@ class FirstQuestionsController < QuizzesController
   skip_before_action :require_login, only: %i[show]
 
   def show
+    # 表示するquestionとchoices
     @first_question = Question.find(params[:format])
     @choices = @first_question.choices.order(created_at: :desc)
+    # 設定したquestionの情報
     @second_question = Question.find(params[:question][:second_question])
     @third_question = Question.find(params[:question][:third_question])
   end

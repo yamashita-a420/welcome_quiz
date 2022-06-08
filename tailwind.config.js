@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -7,7 +9,15 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      // 色の設定を拡張
+      colors: {
+        gray: colors.gray,
+        neutral: colors.neutral,
+        amber: colors.amber,
+        orange: colors.orange,
+      }
+    },
   },
   variants: {
     extend: {},

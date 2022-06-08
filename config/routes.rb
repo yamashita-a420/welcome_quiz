@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#top'
   get 'login', to: 'user_sessions#new'
   post 'login', to: "user_sessions#create"
-  post 'logout', to: 'user_sessions#destroy'
+  delete 'logout', to: 'user_sessions#destroy'
   get 'result', to: 'messages#new'
   post 'result', to: 'messages#create'
   get 'result/message_sent', to: 'messages#show'

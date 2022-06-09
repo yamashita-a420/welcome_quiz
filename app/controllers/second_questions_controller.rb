@@ -1,5 +1,6 @@
 class SecondQuestionsController < ApplicationController
   skip_before_action :require_login, only: %i[show]
+  layout 'layouts/quiz'
 
   def show
     # 表示するquestionとchoices

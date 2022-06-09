@@ -1,17 +1,11 @@
 <article class="card">
-  <div class='col-md-3'>
-    <%= image_tag question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
-  </div>
-  <div class="card-body">
-    <div class='row'>
-      <div class='col-md-9'>
-        <h5><%= question.content %></h5>
-        <p><%= question.comment %></p>
-        <p><%= t('.level', level: question.level) %></p>
-      </div>
-    </div>
-    <div class="table-choice">
-      <%= render 'first_questions/choices', choices: @choices %>
-    </div>
-  </div>
+  <%= image_tag question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
 </article>
+<div class='col-auto'>
+  <h3 class="text-center text-3xl m-4"><%= question.content %></h5>
+  <h4 class="text-center text-xl mx-4 my-2"><%= question.comment %></h4>
+  <h4 class="text-center text-xl mx-4 my-2"><%= t('.level', level: question.level) %></h4>
+</div>
+<div>
+  <%= render 'first_questions/choices', choices: @choices %>
+</div>

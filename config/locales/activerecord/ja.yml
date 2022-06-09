@@ -3,6 +3,9 @@ ja:
     models:
       user: 'ユーザー'
       question: '質問'
+      choice: '選択肢'
+      quiz: 'クイズ'
+      message: 'メッセージ'
     attributes:
       user:
         name: '名前'
@@ -14,6 +17,12 @@ ja:
         content: '質問'
         comment: 'コメント'
         level: '難易度'
+      choice:
+        content: '選択肢'
+        correct_answer: '正解'
+      message:
+        name: '名前'
+        body: 'メッセージ'
   enum:
     question:
       level:

@@ -1,19 +1,25 @@
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('.title') %></h1>
-      <h2><%= t('.score', score: @score) %></h2>
-      <%= render 'messages/question', question: @first_question %>
-      <%= render 'messages/question', question: @second_question %>
-      <%= render 'messages/question', question: @third_question %>
-    </div>
+<div class="bg-base-100">
+  <div class="result-container title-font md: mb-0">
+    <h1 class="quiz-title"><%= t '.title' %></h1>
+    <h1 class="quiz-title"><%= t('.score', score: @score) %></h2>
+    <%= render 'messages/question', question: @first_question %>
+    <%= render 'messages/question', question: @second_question %>
+    <%= render 'messages/question', question: @third_question %>
+    <p><%= t('.thanks_message') %></p>
+    <p><%= t('.enjoy_message') %></p>
+    <p><%= t('.message_please') %></p>
+    <%= render 'form', message: @message %>
+    <button class="btn btn-link"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
   </div>
 </div>
 
-<p><%= t('.thanks_message') %></p>
-<p><%= t('.enjoy_message') %></p>
-<p><%= t('.message_please') %></p>
-
-<%= render 'form', message: @message %>
-
-<%= link_to 'Back', quizzes_path %>
+<%= form_with model: @third_question, url: result_path(@third_question), method: :get, local:true do |f| %>
+  <!-- 設定したquestionの情報 -->
+  <%= f.hidden_field :first_question, :value => @first_question.id %>
+  <%= f.hidden_field :second_question, :value => @second_question.id %>
+  <!-- 回答したchoiceの情報 -->
+  <%= f.hidden_field :first_choice, :value => @first_choice.id %>
+  <%= f.hidden_field :second_choice, :value => @second_choice.id %>
+  <%= f.hidden_field :third_choice, :value => choice.id %>
+  <%= f.submit choice.content, class: 'choice-btn' %>
+<% end %>

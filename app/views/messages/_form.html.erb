@@ -1,12 +1,12 @@
 <%= form_with model: message, url: result_path, local: true do |f| %>
   <%= render 'shared/error_message', object: message %>
-  <div class="field">
+  <div class="form-control">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'assign-form' %>
   </div>
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_field :message %>
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'textarea textarea-primary' %>
   </div>
   <%= f.hidden_field :first_question, :value => @first_question.id %>
   <%= f.hidden_field :second_question, :value => @second_question.id %>
@@ -14,7 +14,5 @@
   <%= f.hidden_field :first_choice, :value => @first_choice.id %>
   <%= f.hidden_field :second_choice, :value => @second_choice.id %>
   <%= f.hidden_field :third_choice, :value => @third_choice.id %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit class:'btn btn-primary'%>
 <% end %>

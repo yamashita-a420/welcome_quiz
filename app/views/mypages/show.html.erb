@@ -1,34 +1,30 @@
-<div class="container pt-3">
-  <div class="row">
-    <div class="flex flex-wrap -m-4 space-y-4">
-      <h1 class="text-neutral-500 text-3xl"><%= t '.title' %></h1>
-      <div class="flex flex-wrap -m-4 space-y-4">
-        <button class="menu-btn focus hover">
-          <%= link_to t('.create_quiz'), new_question_path %>
-        </button>
-        <button class="menu-btn focus hover">
-          <%= link_to t('.questions'), questions_path %>
-        </button>
-        <button class="menu-btn focus hover">
-          <%= link_to t('.quizzes'), quizzes_path %>
-        </button>
-        <button class="menu-btn focus hover">
-          <%= link_to t('.messages_index'), messages_path %>
-        </button>
-      </div>
-      <button class="menu-btn focus hover">
-        <%= link_to t('.edit'), edit_mypage_path %>
-      </button>
-      <table class="table">
-        <tr>
-          <th scope="row"><%= User.human_attribute_name(:email) %></th>
-          <td><%= current_user.email %></td>
-        </tr>
-        <tr>
-          <th scope="row"><%= t '.name' %></th>
-          <td><%= current_user.name %></td>
-        </tr>
-      </table>
-    </div>
+<div class="common-container">
+  <div class="flex flex-col title-font font-medium items-center text-gray-900 mb-4 md: mb-0">
+    <h1 class="ml-3 text-3xl m-6"><%= t '.title' %></h1>
+    <button class="choice-btn">
+      <%= link_to t('.create_quiz'), new_question_path %>
+    </button>
+    <button class="choice-btn">
+      <%= link_to t('.questions'), questions_path %>
+    </button>
+    <button class="choice-btn">
+      <%= link_to t('.quizzes'), quizzes_path %>
+    </button>
+    <button class="choice-btn">
+      <%= link_to t('.messages_index'), messages_path %>
+    </button>
+    <button class="btn btn-primary w-64 m-4">
+      <%= link_to t('.edit'), edit_mypage_path %>
+    </button>
+    <table class="table mx-6">
+      <tr>
+        <th scope="row"><%= t '.name' %></th>
+        <td><%= current_user.name %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= User.human_attribute_name(:email) %></th>
+        <td><%= current_user.email %></td>
+      </tr>
+    </table>
   </div>
 </div>

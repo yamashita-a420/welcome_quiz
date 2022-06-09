@@ -1,24 +1,13 @@
-<div class="container px-5 py-24 mx-auto">
-  <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-    <h1 class="title-font font-medium text-6xl text-gray-900"><%= t('.title') %></h1>
-  </div>
-</div>
-<div class="container px-5 py-16 mx-auto">
-  <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-    <p class="font-medium text-3xl text-gray-900"><%= t('.welcome_message') %></p>
-  </div>
-</div>
-<div class="container px-5 py-4 mx-auto">
-  <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-    <button class="menu-btn focus hover">
-      <%= link_to t('.try'), new_question_path %>
-    </button>
-  </div>
-</div>
-<div class="container px-5 py-4 mx-auto">
-  <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-    <button class="menu-btn focus hover">
-      <%= link_to t('defaults.login'), login_path %>
-    </button>
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-app"><%= t('.title') %></h1>
+      <p class="py-6"><%= t('.welcome_message') %></p>
+      <div class="flex flex-col w-full border-opacity-50">
+        <button class="grid h-20 btn btn-primary place-items-center"><%= link_to t('.try'), new_question_path %></button>
+        <div class="divider">OR</div>
+        <button class="grid h-20 btn btn-primary place-items-center"><%= link_to t('defaults.login'), login_path %></button>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,18 +1,14 @@
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('.title') %></h1>
-      <h2><%= t('.score', score: @score) %></h2>
-      <%= render 'messages/question', question: @first_question %>
-      <%= render 'messages/question', question: @second_question %>
-      <%= render 'messages/question', question: @third_question %>
-    </div>
+<div class="bg-base-100">
+  <div class="result-container title-font md: mb-0">
+    <h1 class="quiz-title"><%= t '.title' %></h1>
+    <h1 class="quiz-title"><%= t('.score', score: @score) %></h2>
+    <%= render 'messages/question', question: @first_question %>
+    <%= render 'messages/question', question: @second_question %>
+    <%= render 'messages/question', question: @third_question %>
+    <p><%= t('.thanks_message') %></p>
+    <p><%= t('.enjoy_message') %></p>
+    <p><%= t('.message_sent') %></p>
+    <%= render 'form', message: @message %>
+    <button class="btn btn-link"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
   </div>
 </div>
-
-<p><%= t('.thanks_message') %></p>
-<p><%= t('.enjoy_message') %></p>
-
-<p><%= t('.message_sent') %></p>
-
-<%= link_to 'Back', quizzes_path %>

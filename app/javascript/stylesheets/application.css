@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-app {
+  font-family: 'Lobster Two', cursive;
+}
+
 .choice-btn {
-  @apply bg-orange-500 text-white border-0 py-2 px-8 rounded text-lg;
+  @apply btn btn-accent w-64 m-2;
 }
 
 .menu-btn {
@@ -12,6 +16,22 @@
 
 .assign-form {
   @apply input input-bordered input-primary w-full max-w-xs;
+}
+
+.common-container {
+  @apply container px-5 py-5 mx-auto;
+}
+
+.quiz-container {
+  @apply container mx-auto px-5 py-3 bg-amber-200 flex flex-col font-medium items-center text-gray-900;
+}
+
+.quiz-title {
+  @apply text-2xl mx-auto px-6 py-3 text-center;
+}
+
+.result-container {
+  @apply container mx-auto px-5 py-3 bg-base-100 flex flex-col font-medium items-center text-gray-900;
 }
 
 @layer utilities {

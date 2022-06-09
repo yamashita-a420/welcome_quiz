@@ -16,7 +16,17 @@ module.exports = {
         neutral: colors.neutral,
         amber: colors.amber,
         orange: colors.orange,
-      }
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
+      },
     },
   },
   variants: {
@@ -39,5 +49,6 @@ module.exports = {
       },
     ],
   },
+  // add daisyUI plugin
   plugins: [require("daisyui")],
 }

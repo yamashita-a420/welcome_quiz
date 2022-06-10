@@ -15,18 +15,14 @@ class MessagesController < ApplicationController
     # 回答したchoiceの情報
     @first_choice = Choice.find(params[:question][:first_choice])
     @second_choice = Choice.find(params[:question][:second_choice])
-    # !!! thirdがsecondと同じになってないか？
     @third_choice = Choice.find(params[:question][:third_choice])
     # 正解数
     @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
-    # メッセージ送信済み
   end
 
   def create
     @message = Message.new(message_params)
-    # @body = params[:body]
     if @message.save
-      # render :new
       redirect_to result_message_sent_path(message: message_quiz_params)
     else
       redirect_to result_message_sent_path(message: quiz_params)
@@ -38,7 +34,6 @@ class MessagesController < ApplicationController
     # 回答したchoiceの情報
     @first_choice = Choice.find(params[:message][:first_choice])
     @second_choice = Choice.find(params[:message][:second_choice])
-    # !!! thirdがsecondと同じになってないか？
     @third_choice = Choice.find(params[:message][:third_choice])
     # 正解数
     @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
@@ -54,7 +49,6 @@ class MessagesController < ApplicationController
     # 回答したchoiceの情報
     @first_choice = Choice.find(params[:message][:first_choice])
     @second_choice = Choice.find(params[:message][:second_choice])
-    # !!! thirdがsecondと同じになってないか？
     @third_choice = Choice.find(params[:message][:third_choice])
     # 正解数
     @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i

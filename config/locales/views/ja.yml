@@ -36,8 +36,6 @@ ja:
   mypages:
     show:
       title: 'マイページ'
-      create_quiz: '質問をつくる'
-      quizzes: 'クイズ画面'
       messages_index: 'メッセージ一覧'
       edit: 'プロフィール編集'
   questions:
@@ -45,7 +43,6 @@ ja:
       title: 'Question Index'
       no_result: '質問がありません'
       level: "難易度：%{level}"
-
     show:
       title: 'Question'
   quizzes:
@@ -75,6 +72,7 @@ ja:
       thanks_message: 'クイズにご参加いただきありがとうございました！'
       enjoy_message: 'ランダムに出題されるのでほかのゲストと見せ合ってお楽しみください'
       message_please: 'よろしければ主催へひとこと'
+      message_sent: 'メッセージ頂戴しました！ありがとうございました'
       send: '送信'
     show:
       title: 'Check the answer!'

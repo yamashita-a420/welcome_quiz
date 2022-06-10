@@ -1,20 +1,26 @@
 <% content_for(:title, t('.title')) %>
-<h1><%= t('.title') %></h1>
-<div class="container pt-3">
-  <!-- 質問一覧 -->
-  <div class="row">
-    <div class="col-12">
+<div class="common-container title-font md: mb-0">
+  <div class="flex flex-col title-font font-medium items-center text-gray-900 mb-4 md: mb-0">
+    <h1 class="ml-3 text-3xl m-6"><%= t '.title' %></h1>
+    <h1><%= t('.title') %></h1>
+    <div class="container pt-3">
+      <!-- 質問一覧 -->
       <div class="row">
-        <% if @questions.present? %>
-          <%= render @questions %>
-        <% else %>
-          <p><%= t('.no_result') %></p>
-        <% end %>
+        <div class="col-12">
+          <div class="row">
+            <% if @questions.present? %>
+              <%= render @questions %>
+            <% else %>
+              <p><%= t('.no_result') %></p>
+            <% end %>
+          </div>
+        </div>
       </div>
+      <!-- リンク -->
+      <button class="btn btn-link"><%= link_to t('defaults.mypage'), mypage_path %></button>
+      <button class="btn btn-link"><%= link_to t('defaults.new_question'), new_question_path %></button>
+      <button class="btn btn-link"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
     </div>
   </div>
-  <!-- リンク -->
-  <%= link_to t('.mypage'), mypage_path %>
-  <%= link_to t('.new_question'), new_question_path %>
-  <%= link_to t('.quizzes'), quizzes_path %>
+</div>
 </div>

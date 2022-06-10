@@ -20,7 +20,7 @@
   </div>
   <div class="form-group">
     <%= f.label :level %>
-    <%= f.text_field :level, class: 'assign-form' %>
+    <%= f.select :level, [[1, 'one'], [2, 'two'], [3, 'three']] %>
   </div>
   <%= f.submit class:'btn btn-accent' %>
 <% end %>

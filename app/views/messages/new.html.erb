@@ -5,21 +5,12 @@
     <%= render 'messages/question', question: @first_question %>
     <%= render 'messages/question', question: @second_question %>
     <%= render 'messages/question', question: @third_question %>
-    <p><%= t('.thanks_message') %></p>
-    <p><%= t('.enjoy_message') %></p>
-    <p><%= t('.message_please') %></p>
-    <%= render 'form', message: @message %>
+    <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= t('.thanks_message') %></h4>
+    <h4 class="text-xl mx-auto px-6 py-3 text-center"><%= t('.enjoy_message') %></h4>
+    <div class="before-send-message">
+      <h4 class="text-xl mx-auto mb-6 px-6 py-3 text-center"><%= t('.message_please') %></h4>
+      <%= render 'form', message: @message %>
+    </div>
     <button class="btn btn-link"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
   </div>
 </div>
-
-<%= form_with model: @third_question, url: result_path(@third_question), method: :get, local:true do |f| %>
-  <!-- 設定したquestionの情報 -->
-  <%= f.hidden_field :first_question, :value => @first_question.id %>
-  <%= f.hidden_field :second_question, :value => @second_question.id %>
-  <!-- 回答したchoiceの情報 -->
-  <%= f.hidden_field :first_choice, :value => @first_choice.id %>
-  <%= f.hidden_field :second_choice, :value => @second_choice.id %>
-  <%= f.hidden_field :third_choice, :value => choice.id %>
-  <%= f.submit choice.content, class: 'choice-btn' %>
-<% end %>

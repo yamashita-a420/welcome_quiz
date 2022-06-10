@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <%= f.label :correct_answer %>
-    <%= f.select :correct_answer, Choice.correct_answers.keys, class: 'assign-form' %>
+    <%= f.select :correct_answer, [['正解', 'correct'], ['不正解', 'incorrect']] %>
   </div>
-  <%= f.submit, class: "btn btn-accent" %>
+  <%= f.submit class: 'btn btn-accent' %>
 <% end %>

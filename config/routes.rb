@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'result', to: 'messages#create'
   get 'result/message_sent', to: 'messages#show'
   get 'messages', to: 'messages#index'
+  delete 'message', to: 'messages#destroy'
 
   resources :users, only: %i[new create]
   resources :questions do

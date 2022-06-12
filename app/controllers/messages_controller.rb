@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
+    @message = current_user.messages.build(message_params)
     if @message.save
       redirect_to result_message_sent_path(message: message_quiz_params)
     else
@@ -52,6 +52,12 @@ class MessagesController < ApplicationController
     @third_choice = Choice.find(params[:message][:third_choice])
     # 正解数
     @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
+  end
+
+  def destroy
+    @message = current_user.messages.find(params[:format])
+    @message.destroy
+    redirect_to messages_url, notice: "Create question was successfully destroyed."
   end
 
   private

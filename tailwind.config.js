@@ -32,23 +32,4 @@ module.exports = {
   variants: {
     extend: {},
   },
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          "primary": "#D1AE15",
-          "secondary": "#E7BE99",
-          "accent": "#FF7900",
-          "neutral": "#C4C4C4",
-          "base-100": "#F5F3F2",
-          "info": "#3ABFF8",
-          "success": "#36D399",
-          "warning": "#FBBD23",
-          "error": "#F87272",
-        },
-      },
-    ],
-  },
-  // add daisyUI plugin
-  plugins: [require("daisyui")],
 }

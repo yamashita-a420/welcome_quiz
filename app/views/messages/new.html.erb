@@ -1,16 +1,16 @@
-<div class="bg-base-100">
+<div class="bg-gray-50">
   <div class="result-container title-font md: mb-0">
-    <h1 class="quiz-title"><%= t '.title' %></h1>
-    <h1 class="quiz-title"><%= t('.score', score: @score) %></h2>
+    <h1 class="text-2xl text-gray-600 mx-auto px-6 py-3 text-center"><%= t '.title' %></h1>
+    <h1 class="text-3xl mx-auto px-6 py-3 text-center text-orange-500"><%= t('.score', score: @score) %></h2>
     <%= render 'messages/question', question: @first_question %>
     <%= render 'messages/question', question: @second_question %>
     <%= render 'messages/question', question: @third_question %>
     <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= t('.thanks_message') %></h4>
     <h4 class="text-xl mx-auto px-6 py-3 text-center"><%= t('.enjoy_message') %></h4>
-    <div class="before-send-message">
+    <div>
       <h4 class="text-xl mx-auto mb-6 px-6 py-3 text-center"><%= t('.message_please') %></h4>
       <%= render 'form', message: @message %>
     </div>
-    <button class="btn btn-link"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
+    <div class="text-orange-500 font-bold my-6"><%= link_to t('defaults.quizzes'), quizzes_path %></button>
   </div>
 </div>

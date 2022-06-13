@@ -1,13 +1,31 @@
-<div class='col-auto'>
-  <h3 class="text-center text-2xl m-4"><%= t '.q' %>. <%= question.content %></h5>
-  <h4 class="text-center text-xl mx-4 my-2"><%= Question.human_attribute_name(:level) %>: <%= question.level %></h4>
-</div>
-<article class="card">
-  <%= image_tag question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
-</article>
-<div>
-  <%= render 'messages/choices', choices: question.choices %>
-</div>
-<div class='col-auto'>
-  <h4 class="text-center text-xl mx-4 my-2"><%= question.comment %></h4>
-</div>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 pt-12 pb-6 mx-auto">
+    <div class="flex flex-wrap -m-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-center text-2xl m-4"><%= t '.q' %>. <%= question.content %></h5>
+          <h4 class="text-center text-xl mx-4 my-2">
+            <%= Question.human_attribute_name(:level) %>
+            <% case question.level %>
+              <% when "one" %>
+                <%= icon 'fas', 'star' %>
+                <%= icon 'far', 'star' %>
+                <%= icon 'far', 'star' %>
+              <% when "two" %>
+                <%= icon 'fas', 'star' %>
+                <%= icon 'fas', 'star' %>
+                <%= icon 'far', 'star' %>
+              <% else %>
+                <%= icon 'fas', 'star' %>
+                <%= icon 'fas', 'star' %>
+                <%= icon 'fas', 'star' %>
+            <% end %>
+          </h4>
+          <div class="rounded-lg my-5">
+            <%= image_tag question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
+          </div>
+          <%= render 'messages/choices', choices: question.choices %>
+          <h4 class="text-center text-xl mx-4 my-4"><%= question.comment %></h4>
+        </div>
+    </div>
+  </div>
+</section>

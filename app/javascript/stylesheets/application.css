@@ -6,8 +6,12 @@
   font-family: 'Lobster Two', cursive;
 }
 
+.top-btn {
+  @apply border border-yellow-400 bg-orange-400 text-white rounded-lg px-10 py-7 m-2 w-72 h-20 transition duration-500;
+}
+
 .choice-btn {
-  @apply btn btn-accent w-64 m-2;
+  @apply border border-yellow-400 bg-orange-400 text-white rounded-lg p-5 m-2 w-72 h-16 transition duration-500;
 }
 
 .menu-btn {
@@ -15,7 +19,7 @@
 }
 
 .assign-form {
-  @apply input input-bordered input-primary w-full max-w-xs;
+  @apply pl-2 w-full outline-none border-none;
 }
 
 .common-container {
@@ -31,7 +35,7 @@
 }
 
 .result-container {
-  @apply container mx-auto px-5 py-3 bg-base-100 flex flex-col font-medium items-center text-gray-900;
+  @apply container mx-auto px-5 py-3 bg-gray-50 flex flex-col font-medium items-center text-gray-900;
 }
 
 @layer utilities {

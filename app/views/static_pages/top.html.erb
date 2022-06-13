@@ -1,13 +1,17 @@
-<div class="hero min-h-screen bg-base-200">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-app"><%= t('.title') %></h1>
-      <p class="py-6"><%= t('.welcome_message') %></p>
-      <div class="flex flex-col w-full border-opacity-50">
-        <button class="grid h-20 btn btn-primary place-items-center"><%= link_to t('.try'), new_question_path %></button>
-        <div class="divider">OR</div>
-        <button class="grid h-20 btn btn-primary place-items-center"><%= link_to t('defaults.login'), login_path %></button>
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <h1 class="text-5xl font-app sm:text-4xl text-3xl mb-4 font-medium"><%= t('.title') %></h1>
+    <div class="text-center lg:w-2/3 w-full">
+      <p class="mb-8 leading-relaxed py-6"><%= t('.welcome_message') %></p>
+      <div class="flex flex-col justify-center items-center">
+        <button class="inline-flex top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
+          <%= link_to t('.try'), new_question_path %>
+        </button>
+        <div>OR</div>
+        <button class="inline-flex top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
+          <%= link_to t('defaults.login'), login_path %>
+        </button>
       </div>
     </div>
   </div>
-</div>
+</section>

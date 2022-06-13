@@ -1,12 +1,12 @@
 <%= form_with model: message, url: result_path do |f| %>
   <%= render 'shared/error_message', object: message %>
-  <div class="form-control">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'assign-form' %>
+  <%= f.label :name %>
+  <div class="flex items-center border-2 bg-gray-50 mb-5 py-2 px-3 rounded-2xl">
+    <%= f.text_field :name, class: 'pl-2 w-full outline-none border-none' %>
   </div>
-  <div class="form-control">
-    <%= f.label :body, class: 'mt-3' %>
-    <%= f.text_area :body, class: 'textarea textarea-primary ' %>
+  <%= f.label :body, class: 'mt-3' %>
+  <div class="flex items-center border-2 bg-gray-50 mb-5 py-2 px-3 rounded-2xl">
+    <%= f.text_area :body, class: 'pl-2 w-full outline-none border-none' %>
   </div>
   <%= f.hidden_field :first_question, :value => @first_question.id %>
   <%= f.hidden_field :second_question, :value => @second_question.id %>
@@ -14,5 +14,5 @@
   <%= f.hidden_field :first_choice, :value => @first_choice.id %>
   <%= f.hidden_field :second_choice, :value => @second_choice.id %>
   <%= f.hidden_field :third_choice, :value => @third_choice.id %>
-  <%= f.submit class:'btn btn-primary mt-3'%>
+  <%= f.submit class:'block w-full bg-yellow-400 mt-3 py-2 rounded-2xl hover:bg-yellow-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2'%>
 <% end %>

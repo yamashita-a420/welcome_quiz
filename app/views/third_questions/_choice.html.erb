@@ -6,5 +6,5 @@
   <%= f.hidden_field :first_choice, :value => @first_choice.id %>
   <%= f.hidden_field :second_choice, :value => @second_choice.id %>
   <%= f.hidden_field :third_choice, :value => choice.id %>
-  <%= f.submit choice.content, class: 'choice-btn' %>
+  <%= f.submit choice.content, class: 'choice-btn hover:bg-yellow-600 focus:outline-none focus:shadow-outline' %>
 <% end %>

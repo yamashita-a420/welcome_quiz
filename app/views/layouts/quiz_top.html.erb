@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WelcomeQuiz</title>
+    <title>WelcomeQuizMaker</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,8 +16,9 @@
   </head>
 
   <body>
-    <%= render 'shared/header_result' %>
-    <%= yield %>
-    <%= render 'shared/footer_result' %>
+    <div class="bg-amber-200">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer_quiz' %>
   </body>
 </html>

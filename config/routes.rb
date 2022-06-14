@@ -3,19 +3,20 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   post 'login', to: "user_sessions#create"
   delete 'logout', to: 'user_sessions#destroy'
-  get 'result', to: 'messages#new'
   post 'result', to: 'messages#create'
-  get 'result/message_sent', to: 'messages#show'
   get 'messages', to: 'messages#index'
   delete 'message', to: 'messages#destroy'
 
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create] do
+    resources :quizzes, only: %i[index]
+    resources :first_questions, only: %i[show]
+    resources :second_questions, only: %i[show]
+    resources :third_questions, only: %i[show]
+    get 'result', to: 'messages#new'
+    get 'result/message_sent', to: 'messages#show'
+  end
   resources :questions do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
-  resources :quizzes, only: %i[index]
-  resource :first_question, only: %i[show]
-  resource :second_question, only: %i[show]
-  resource :third_question, only: %i[show]
   resource :mypage, only: %i[show edit update]
 end

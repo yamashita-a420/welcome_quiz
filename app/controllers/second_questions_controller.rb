@@ -4,7 +4,7 @@ class SecondQuestionsController < ApplicationController
 
   def show
     # 表示するquestionとchoices
-    @second_question = Question.find(params[:format])
+    @second_question = Question.find(params[:id])
     @choices = @second_question.choices.order(created_at: :desc)
     # 設定したquestionの情報
     @first_question = Question.find(params[:question][:first_question])

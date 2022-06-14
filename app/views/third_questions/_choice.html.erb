@@ -1,7 +1,8 @@
-<%= form_with model: @third_question, url: result_path(@third_question), method: :get, local:true do |f| %>
+<%= form_with model: @third_question, url: user_result_path(user_id: @third_question.user_id), method: :get, local:true do |f| %>
   <!-- 設定したquestionの情報 -->
   <%= f.hidden_field :first_question, :value => @first_question.id %>
   <%= f.hidden_field :second_question, :value => @second_question.id %>
+  <%= f.hidden_field :third_question, :value => @third_question.id %>
   <!-- 回答したchoiceの情報 -->
   <%= f.hidden_field :first_choice, :value => @first_choice.id %>
   <%= f.hidden_field :second_choice, :value => @second_choice.id %>

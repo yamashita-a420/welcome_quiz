@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   post 'login', to: "user_sessions#create"
   delete 'logout', to: 'user_sessions#destroy'
-  post 'result', to: 'messages#create'
   get 'messages', to: 'messages#index'
   delete 'message', to: 'messages#destroy'
 
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
     resources :second_questions, only: %i[show]
     resources :third_questions, only: %i[show]
     get 'result', to: 'messages#new'
+    post 'result', to: 'messages#create'
     get 'result/message_sent', to: 'messages#show'
   end
   resources :questions do

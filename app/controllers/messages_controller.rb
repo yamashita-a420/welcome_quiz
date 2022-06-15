@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
+    @user = User.find(params[:user_id])
     # 表示するquestion
     @first_question = Question.find(params[:first_question])
     @second_question = Question.find(params[:second_question])
@@ -21,7 +22,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = current_user.messages.build(message_params)
+    @message = Message.new(message_params)
     if @message.save
       redirect_to user_result_message_sent_path(message: message_quiz_params)
     else
@@ -63,7 +64,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :body).merge(user_id: params[:user_id])
   end
 
   def quiz_params

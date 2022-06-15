@@ -21,14 +21,14 @@ ja:
         content: '選択肢'
         correct_answer: '正解'
       message:
-        name: '名前'
+        name: 'お名前'
         body: 'メッセージ'
   enum:
     question:
       level:
-        one: '★'
-        twe: '★★'
-        three: '★★★'
+        one: '1'
+        twe: '2'
+        three: '3'
     choice:
       correct_answer:
         incorrect: '不正解'

@@ -12,6 +12,5 @@ class ThirdQuestionsController < ApplicationController
     # 回答したchoiceの情報
     @first_choice = Choice.find(params[:first_choice])
     @second_choice = Choice.find(params[:second_choice])
-    binding.pry
   end
 end

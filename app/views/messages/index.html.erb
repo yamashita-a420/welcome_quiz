@@ -24,4 +24,4 @@
 <!-- リンク -->
 <%= link_to t('defaults.mypage'), mypage_path %>
 <%= link_to t('defaults.new_question'), new_question_path %>
-<%= link_to t('defaults.quizzes'), quizzes_path %>
+<%= link_to t('defaults.quizzes'), user_quizzes_path(current_user) %>

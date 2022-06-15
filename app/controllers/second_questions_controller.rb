@@ -7,9 +7,9 @@ class SecondQuestionsController < ApplicationController
     @second_question = Question.find(params[:id])
     @choices = @second_question.choices.order(created_at: :desc)
     # 設定したquestionの情報
-    @first_question = Question.find(params[:question][:first_question])
-    @third_question = Question.find(params[:question][:third_question])
+    @first_question = Question.find(params[:first_question])
+    @third_question = Question.find(params[:third_question])
     # 回答したchoiceの情報
-    @first_choice = Choice.find(params[:question][:first_choice])
+    @first_choice = Choice.find(params[:first_choice])
   end
 end

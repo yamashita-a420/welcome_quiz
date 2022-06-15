@@ -72,8 +72,11 @@ ja:
       thanks_message: 'クイズにご参加いただき<br/>ありがとうございました！'
       enjoy_message: 'ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください'
       message_please: 'よろしければ 主催へひとこと<br/>おねがいします'
+      name: 'お名前'
+      note: '※送信されるのは、お名前とメッセージのみです。<br/>正解数は送信しません。お気軽にどうぞ'
       message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
       send: '送信'
+      once_more: '＼もう一度挑戦する方はこちら／'
     show:
       message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
       title: 'Check the answer!'

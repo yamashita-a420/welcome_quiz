@@ -9,13 +9,13 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     # 表示するquestion
-    @first_question = Question.find(params[:question][:first_question])
-    @second_question = Question.find(params[:question][:second_question])
-    @third_question = Question.find(params[:question][:third_question])
+    @first_question = Question.find(params[:first_question])
+    @second_question = Question.find(params[:second_question])
+    @third_question = Question.find(params[:third_question])
     # 回答したchoiceの情報
-    @first_choice = Choice.find(params[:question][:first_choice])
-    @second_choice = Choice.find(params[:question][:second_choice])
-    @third_choice = Choice.find(params[:question][:third_choice])
+    @first_choice = Choice.find(params[:first_choice])
+    @second_choice = Choice.find(params[:second_choice])
+    @third_choice = Choice.find(params[:third_choice])
     # 正解数
     @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
   end

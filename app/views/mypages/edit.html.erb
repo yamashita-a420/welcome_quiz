@@ -1,2 +1,5 @@
 <h1>Mypage#edit</h1>
-<p>Find me in app/views/mypage/edit.html.erb</p>
+
+<%= render 'form', question: @question %>
+
+<%= link_to 'Back', mypage_path %>

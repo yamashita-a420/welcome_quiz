@@ -1,0 +1,13 @@
+<%= form_with url: mypage_path, method: :post do |f| %>
+  <div class="field">
+    <%= f.label :email, User.human_attribute_name(:email) %><br />
+    <%= f.text_field :email, class: "assign-form" %>
+  </div>
+  <div class="field">
+    <%= f.label :password, User.human_attribute_name(:password) %><br />
+    <%= f.password_field :password, class: "assign-form" %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('defaults.login'), class: "btn btn-accent" %>
+  </div>
+<% end %>

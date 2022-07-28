@@ -1,95 +1,108 @@
 ja:
   defaults:
-    top: 'Top'
-    login: 'ログイン'
-    register: '登録'
-    logout: 'ログアウト'
-    edit: '編集'
-    destroy: '削除'
-    questions: '質問一覧'
-    mypage: 'マイページ'
-    new_question: '質問をつくる'
-    quizzes: 'クイズ画面TOP'
-    preview: 'プレビュー画面'
+    top: "Top"
+    login: "ログイン"
+    register: "登録"
+    logout: "ログアウト"
+    edit: "編集"
+    destroy: "削除"
+    update: "更新"
+    questions: "質問一覧"
+    mypage: "マイページ"
+    new_question: "質問をつくる"
+    quizzes: "クイズ画面TOP"
+    preview: "プレビュー画面"
+    message:
+      require_login: "ログインしてください"
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
+      deleted: "%{item}を削除しました"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      delete_confirm: "削除しますか？"
+      not_authorized: "権限がありません"
   static_pages:
     top:
-      title: 'Welcome Quiz Maker'
-      welcome_message: 'ようこそ！'
-      try: '質問をつくってみる'
+      title: "Welcome Quiz Maker"
+      welcome_message: "ようこそ！"
+      try: "質問をつくってみる"
   users:
     new:
-      title: 'ユーザー登録'
-      to_login_page: 'ログインページへ'
+      title: "ユーザー登録"
+      to_login_page: "ログインページへ"
     create:
-      success: 'ユーザー登録が完了しました'
-      fail: 'ユーザー登録に失敗しました'
+      success: "ユーザー登録が完了しました"
+      fail: "ユーザー登録に失敗しました"
   user_sessions:
     new:
-      title: 'ログイン'
-      to_register_page: '登録ページへ'
-      password_forget: 'パスワードをお忘れの方はこちら'
+      title: "ログイン"
+      to_register_page: "登録ページへ"
+      password_forget: "パスワードをお忘れの方はこちら"
     create:
-      success: 'ログインしました'
-      fail: 'ログインに失敗しました'
+      success: "ログインしました"
+      fail: "ログインに失敗しました"
     destroy:
-      success: 'ログアウトしました'
+      success: "ログアウトしました"
   mypages:
     show:
-      title: 'マイページ'
-      messages_index: 'メッセージ一覧'
-      edit: 'プロフィール編集'
+      title: "マイページ"
+      messages_index: "メッセージ一覧"
+      edit: "プロフィール編集"
+    edit:
+      title: "プロフィール編集"
+      success: ""
   questions:
     index:
-      title: 'Question Index'
-      no_result: '質問がありません'
+      title: "Question Index"
+      no_result: "質問がありません"
       level: "難易度：%{level}"
     show:
-      title: 'Question'
+      title: "Question"
   quizzes:
     index:
-      welcome_message: 'ようこそ！'
-      button: 'スタート'
+      welcome_message: "ようこそ！"
+      button: "スタート"
     show:
-      title: 'Welcome Quiz'
+      title: "Welcome Quiz"
   first_questions:
     show:
-      title: 'Question 1'
+      title: "Question 1"
   second_questions:
     show:
-      title: 'Question 2'
+      title: "Question 2"
   third_questions:
     show:
-      title: 'Question 3'
+      title: "Question 3"
   messages:
     index:
-      mypage: 'マイページ'
-      new_question: '質問をつくる'
-      quizzes: 'クイズ画面'
+      mypage: "マイページ"
+      new_question: "質問をつくる"
+      quizzes: "クイズ画面"
     new:
-      title: 'Check the answer!'
+      title: "Check the answer!"
       score: "＼%{score}問正解／"
-      q: 'Q'
-      thanks_message: 'クイズにご参加いただき<br/>ありがとうございました！'
-      enjoy_message: 'ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください'
-      message_please: 'よろしければ 主催へひとこと<br/>おねがいします'
-      name: 'お名前'
-      note: '※送信されるのは、お名前とメッセージのみです。<br/>正解数は送信しません。お気軽にどうぞ'
-      message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
-      send: '送信'
-      once_more: '＼もう一度挑戦する方はこちら／'
+      q: "Q"
+      thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
+      enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
+      message_please: "よろしければ 主催へひとこと<br/>おねがいします"
+      name: "お名前"
+      note: "※送信されるのは、お名前とメッセージのみです。<br/>正解数は送信しません。お気軽にどうぞ"
+      message_sent: "メッセージ頂戴しました！<br/>ありがとうございました"
+      send: "送信"
+      once_more: "＼もう一度挑戦する方はこちら／"
     show:
-      message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
-      title: 'Check the answer!'
+      message_sent: "メッセージ頂戴しました！<br/>ありがとうございました"
+      title: "Check the answer!"
       score: "＼%{score}問正解／"
-      thanks_message: 'クイズにご参加いただき<br/>ありがとうございました！'
-      enjoy_message: 'ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください'
-      once_more: '＼もう一度挑戦する方はこちら／'
+      thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
+      enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
+      once_more: "＼もう一度挑戦する方はこちら／"
   helpers:
-    app: 'Welcome Quiz Maker'
-    quiz: 'Welcome Quiz'
+    app: "Welcome Quiz Maker"
+    quiz: "Welcome Quiz"
     submit:
-      create: '登録する'
-      update: 更新する
-      submit: 保存する
+      create: "登録する"
+      update: "更新する"
+      submit: "保存する"
       message:
-        create: 送る
+        create: "送る"

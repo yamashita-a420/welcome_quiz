@@ -1,5 +1,5 @@
 <div class="common-container">
-  <div class="flex flex-col title-font font-medium items-center text-gray-900 mb-4 md: mb-0">
+  <div class="flex flex-col title-font font-medium items-center text-gray-900">
     <h1 class="ml-3 text-3xl m-6"><%= t '.title' %></h1>
     <button class="choice-btn">
       <%= link_to t('defaults.new_question'), new_question_path %>
@@ -13,12 +13,12 @@
     <button class="choice-btn">
       <%= link_to t('.messages_index'), messages_path %>
     </button>
-    <button class="btn btn-primary w-64 m-4">
+    <button class="choice-btn">
       <%= link_to t('.edit'), edit_mypage_path %>
     </button>
     <table class="table mx-6">
       <tr>
-        <th scope="row"><%= t '.name' %></th>
+        <th scope="row"><%= User.human_attribute_name(:name) %></th>
         <td><%= current_user.name %></td>
       </tr>
       <tr>

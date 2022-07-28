@@ -1,35 +1,38 @@
 ja:
   activerecord:
     models:
-      user: 'ユーザー'
-      question: '質問'
-      choice: '選択肢'
-      quiz: 'クイズ'
-      message: 'メッセージ'
+      user: "ユーザー"
+      question: "質問"
+      choice: "選択肢"
+      quiz: "クイズ"
+      message: "メッセージ"
     attributes:
       user:
-        name: '名前'
-        email: 'メールアドレス'
-        password: 'パスワード'
-        password_confirmation: 'パスワード確認'
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
       question:
-        photo: '写真'
-        content: '質問'
-        comment: 'コメント'
-        level: '難易度'
+        photo: "写真"
+        content: "質問"
+        comment: "コメント"
+        level: "難易度"
       choice:
-        content: '選択肢'
-        correct_answer: '正解'
+        content: "選択肢"
+        correct_answer: "正解"
       message:
-        name: 'お名前'
-        body: 'メッセージ'
+        name: "お名前"
+        body: "メッセージ"
+    errors:
+      messages:
+
   enum:
     question:
       level:
-        one: '1'
-        twe: '2'
-        three: '3'
+        one: "1"
+        twe: "2"
+        three: "3"
     choice:
       correct_answer:
-        incorrect: '不正解'
-        correct: '正解'
+        incorrect: "不正解"
+        correct: "正解"

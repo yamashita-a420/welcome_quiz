@@ -6,12 +6,12 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = QuestionChoiceForm.new
   end
 
   def create
-    @question = current_user.questions.build(question_params)
-    if @question.save
+    @question = QuestionChoiceForm.build(question_params)
+    if @question.save_question!
       redirect_to question_url(@question), notice: "question was successfully created."
     else
       render :new
@@ -45,6 +45,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level)
+    params.require(:question_choice_form).permit(:photo, :photo_cache, :content, :comment, :level)
   end
 end

@@ -23,18 +23,13 @@
     <%= f.select :level, [[1, 'one'], [2, 'two'], [3, 'three']] %>
   </div>
     Choices:
-  <ul>
-    <%= f.fields_for :choices do |choices_form| %>
-      <li>
-        <%= choices_form.label :content %>
-        <%= choices_form.text_field :content %>
-
-        <%= choices_form.label :correct_answer %>
-        <%= choices_form.select :correct_answer, [['正解', 'correct'], ['不正解', 'incorrect']] %>
-        削除
-        <%= choices_form.check_box :_destroy %>
-      </li>
+  <div id='choices'>
+    <%= f.fields_for :choices do |choice| %>
+      <%= render 'choice_fields', :f => choice %>
     <% end %>
-  </ul>
+    <div class='links'>
+      <%= link_to_add_association 'add choice', f, :choices %>
+    </div>
+  </div>
   <%= f.submit class:'btn btn-accent' %>
 <% end %>

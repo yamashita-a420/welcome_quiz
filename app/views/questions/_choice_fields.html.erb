@@ -1,0 +1,11 @@
+<div class='nested-fields'>
+  <div class="field">
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :correct_answer %>
+    <%= f.select :correct_answer, [['正解', 'correct' ], ['不正解', 'incorrect' ]] %>
+  </div>
+  <%= link_to_remove_association "remove choice" , f %>
+</div>

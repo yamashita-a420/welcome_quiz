@@ -58,6 +58,9 @@ ja:
       level: "難易度：%{level}"
     show:
       title: "Question"
+    new:
+      title: "新しい質問・選択肢"
+      choices: "選択肢"
   quizzes:
     index:
       welcome_message: "ようこそ！"

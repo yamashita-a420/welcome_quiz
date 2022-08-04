@@ -4,7 +4,7 @@ class ChoicesController < ApplicationController
   def new; end
 
   def create
-    @choice = current_user.choices.build(choice_params)
+    @choice = @question.choices.build(choice_params)
     @choice.save
   end
 
@@ -26,7 +26,8 @@ class ChoicesController < ApplicationController
   private
 
   def set_choice
-    @choice = current_user.choices.find(params[:id])
+    @question = Question.find(params[:id])
+    @choice = @question.choices.find(params[:id])
   end
 
   def choice_params

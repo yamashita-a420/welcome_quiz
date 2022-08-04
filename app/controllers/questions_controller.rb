@@ -11,8 +11,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.build(question_params)
-    if @question.save_question!
+    @question = Question.new(question_params)
+    if @question.save
       redirect_to question_url(@question), notice: "question was successfully created."
     else
       render :new
@@ -48,6 +48,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer, :_destroy])
+    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer, :_destroy]).merge(user_id: current_user.id)
   end
 end

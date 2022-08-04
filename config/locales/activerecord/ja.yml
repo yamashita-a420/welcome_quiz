@@ -14,12 +14,12 @@ ja:
         password_confirmation: "パスワード確認"
       question:
         photo: "写真"
-        content: "質問"
-        comment: "コメント"
+        content: "質問文"
+        comment: "ヒント・コメント"
         level: "難易度"
       choice:
-        content: "選択肢"
-        correct_answer: "正解"
+        content: "内容"
+        correct_answer: "正解/不正解"
       message:
         name: "お名前"
         body: "メッセージ"

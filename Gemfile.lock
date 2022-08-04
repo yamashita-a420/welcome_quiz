@@ -82,6 +82,7 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
+    cocoon (1.2.15)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
@@ -286,6 +287,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   carrierwave (~> 2.0)
+  cocoon
   figaro
   fog-aws
   font-awesome-sass

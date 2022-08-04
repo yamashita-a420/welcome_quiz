@@ -1,7 +1,6 @@
 class Choice < ApplicationRecord
   belongs_to :user
   belongs_to :question
-  self.ignored_columns = [:user_id]
 
   enum correct_answer: { incorrect: 0, correct: 1}
 

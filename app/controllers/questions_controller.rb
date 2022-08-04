@@ -6,11 +6,12 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = QuestionChoiceForm.new
+    @question = Question.new
+    @question.choices.build
   end
 
   def create
-    @question = QuestionChoiceForm.build(question_params)
+    @question = Question.build(question_params)
     if @question.save_question!
       redirect_to question_url(@question), notice: "question was successfully created."
     else
@@ -26,7 +27,9 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
-    if @question.update(question_params)
+    @question = Question.new(question_params, question: @question)
+
+    if @question.save
       redirect_to question_url(@question), notice: "Create question was successfully updated."
     else
       render :edit
@@ -45,6 +48,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question_choice_form).permit(:photo, :photo_cache, :content, :comment, :level)
+    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer, :_destroy])
   end
 end

@@ -1,4 +1,4 @@
-<%= form_with model: @question, url: questions_path do |f| %>
+<%= form_with model: @question do |f| %>
   <%= render 'shared/error_message', object: @question %>
   <div class="form-group">
     <%= f.label :photo %></br>
@@ -6,14 +6,13 @@
     <%= f.hidden_field :photo_cache %>
   </div>
   <div class='mt-3 mb-3'>
-    <% binding.pry %>
     <%= image_tag question.photo.url,
                   id: 'preview',
                   size: '300x200' %>
   </div>
   <div class="form-group">
-    <%= f.label :question_content %>
-    <%= f.text_field :question_content, class: 'assign-form' %>
+    <%= f.label :content %>
+    <%= f.text_field :content, class: 'assign-form' %>
   </div>
   <div class="form-group">
     <%= f.label :comment %>
@@ -23,5 +22,19 @@
     <%= f.label :level %>
     <%= f.select :level, [[1, 'one'], [2, 'two'], [3, 'three']] %>
   </div>
+    Choices:
+  <ul>
+    <%= f.fields_for :choices do |choices_form| %>
+      <li>
+        <%= choices_form.label :content %>
+        <%= choices_form.text_field :content %>
+
+        <%= choices_form.label :correct_answer %>
+        <%= choices_form.select :correct_answer, [['正解', 'correct'], ['不正解', 'incorrect']] %>
+        削除
+        <%= choices_form.check_box :_destroy %>
+      </li>
+    <% end %>
+  </ul>
   <%= f.submit class:'btn btn-accent' %>
 <% end %>

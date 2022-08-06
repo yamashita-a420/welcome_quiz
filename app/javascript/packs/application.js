@@ -16,4 +16,4 @@ ActiveStorage.start()
 require("jquery")
 require("@nathanvda/cocoon")
 
-require("common.js")
+import "../question/common.js"

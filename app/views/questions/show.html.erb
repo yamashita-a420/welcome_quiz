@@ -14,9 +14,6 @@
             </div>
           </div>
           <div class="js-table-choice">
-            <%= render 'choices/form', { question: @question, choice: @choice } %>
-          </div>
-          <div class="js-table-choice">
             <%= render 'choices/choices', { choices: @choices } %>
           </div>
           <%= link_to t('defaults.edit'), edit_question_path(@question) %>

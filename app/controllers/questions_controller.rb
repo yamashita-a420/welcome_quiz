@@ -13,8 +13,9 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to question_url(@question), notice: "question was successfully created."
+      redirect_to question_url(@question), success: t('defaults.message.created', item: Question.model_name.human)
     else
+      flash.now[:danger] = t('defaults.message.not_created', item: Question.model_name.human)
       render :new
     end
   end
@@ -27,18 +28,19 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
-    @question = Question.new(question_params, question: @question)
+    @question = Question.new(question_params)
 
     if @question.save
-      redirect_to question_url(@question), notice: "Create question was successfully updated."
+      redirect_to question_url(@question), success: t('defaults.message.updated', item: Question.model_name.human)
     else
+      flash.now[:danger] = t('defaults.message.not_updated', item: Question.model_name.human)
       render :edit
     end
   end
 
   def destroy
-    @question.destroy
-    redirect_to questions_url, notice: "Create question was successfully destroyed."
+    @question.destroy!
+    redirect_to questions_url, success: t('defaults.message.deleted', item: Question.model_name.human)
   end
 
   private

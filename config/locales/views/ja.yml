@@ -53,14 +53,16 @@ ja:
       success: ""
   questions:
     index:
-      title: "Question Index"
+      title: "クイズ一覧"
       no_result: "質問がありません"
       level: "難易度：%{level}"
     show:
-      title: "Question"
+      title: "質問・選択肢"
     new:
-      title: "新しい質問・選択肢"
+      title: "質問・選択肢を作成"
       choices: "選択肢"
+    edit:
+      title: "質問・選択肢を編集"
   quizzes:
     index:
       welcome_message: "ようこそ！"

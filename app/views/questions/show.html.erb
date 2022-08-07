@@ -26,16 +26,23 @@
                     <%= icon 'fas', 'star' %>
                 <% end %>
               </h4>
-              <p><%= @question.comment %></p>
-              <p><%= t('.level', level: @question.level) %></p>
+              <h4 class="text-center text-xl mx-4 my-2"><%= @question.comment %></h4>
             </div>
           </div>
-          <div class="js-table-choice">
+          <div>
             <%= render 'choices/choices', { choices: @choices } %>
           </div>
-          <%= link_to t('defaults.edit'), edit_question_path(@question) %>
-          <%= link_to t('defaults.destroy'), question_path(@question), method: :delete %>
-          <%= link_to t('defaults.questions'), questions_path %>
+          <div class="text-right">
+            <%= link_to edit_question_path(@question) do %>
+              <%= icon 'fa', 'pen' %>
+            <% end %>
+            <%= link_to question_path(@question), method: :delete do %>
+              <%= icon 'fas', 'trash' %>
+            <% end %>
+          </div>
+          <div class="container mx-auto px-5 py-3 flex flex-col font-medium items-center title-font md: mb-0">
+            <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.questions'), questions_path %></button>
+          </div>
         </div>
       </article>
     </div>

@@ -5,7 +5,7 @@
         <div class="h-full bg-gray-100 border-2 border-gray-200 border-opacity-60 p-6 rounded-lg overflow-hidden">
           <%= image_tag question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
           <div class='col-auto'>
-            <h3 class="text-center text-3xl m-4"><%= question.content %></h3>
+            <h3 class="text-center text-3xl m-4"><%= link_to question.content, question_path(question) %></h3>
             <h4 class="text-center text-xl mx-4 my-2"><%= question.comment %></h4>
             <h4 class="text-center text-xl mx-4 my-2">
               <%= Question.human_attribute_name(:level) %>
@@ -27,6 +27,14 @@
           </div>
           <div>
             <%= render 'choices/choices', choices: question.choices %>
+          </div>
+          <div class="text-right">
+            <%= link_to edit_question_path(question) do %>
+              <%= icon 'fa', 'pen' %>
+            <% end %>
+            <%= link_to question_path(question), method: :delete do %>
+              <%= icon 'fas', 'trash' %>
+            <% end %>
           </div>
         </div>
       </div>

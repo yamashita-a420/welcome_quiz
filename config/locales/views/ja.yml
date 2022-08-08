@@ -7,10 +7,10 @@ ja:
     edit: "編集"
     destroy: "削除"
     update: "更新"
-    questions: "質問一覧"
+    questions: "クイズ一覧"
     mypage: "マイページ"
-    new_question: "質問をつくる"
-    quizzes: "クイズ画面TOP"
+    new_question: "クイズをつくる"
+    quizzes: "チャレンジする"
     preview: "プレビュー画面"
     message:
       require_login: "ログインしてください"
@@ -57,12 +57,12 @@ ja:
       no_result: "質問がありません"
       level: "難易度：%{level}"
     show:
-      title: "質問・選択肢"
+      title: "クイズ詳細"
     new:
-      title: "質問・選択肢を作成"
+      title: "クイズをつくる"
       choices: "選択肢"
     edit:
-      title: "質問・選択肢を編集"
+      title: "クイズ編集"
   quizzes:
     index:
       welcome_message: "ようこそ！"
@@ -81,7 +81,7 @@ ja:
   messages:
     index:
       mypage: "マイページ"
-      new_question: "質問をつくる"
+      new_question: "クイズをつくる"
       quizzes: "クイズ画面"
     new:
       title: "Check the answer!"

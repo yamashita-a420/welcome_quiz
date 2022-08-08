@@ -1,18 +1,16 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       // 色の設定を拡張
       colors: {
-        gray: colors.gray,
+        gray: colors.zinc,
         neutral: colors.neutral,
         amber: colors.amber,
         orange: colors.orange,
@@ -29,7 +27,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+  plugins: [require("daisyui")],
 }

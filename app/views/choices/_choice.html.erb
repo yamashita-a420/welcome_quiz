@@ -1,4 +1,11 @@
-<p class="card-text">
-  <p><%= choice.content %>
-  <%= choice.correct_answer %></p>
-</p>
+<% if choice.correct_answer == "correct" %>
+  <h3 class="text-center text-xl text-orange-500 m-2">
+    <%= choice.content %>
+    <%= icon 'far', 'circle' %>
+  </h3>
+<% else %>
+  <h4 class="text-center text-xl m-1">
+    <%= choice.content %>
+    <%= icon 'far', 'x' %>
+  </h4>
+<% end %>

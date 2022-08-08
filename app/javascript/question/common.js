@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('atction-button')
+  const button = document.getElementById('action-button')
   button.addEventListener('change', ()=> {previewImage()})
 
   function previewImage() {

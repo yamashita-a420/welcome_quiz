@@ -1,6 +1,6 @@
 <div class="common-container">
   <div class="flex flex-col title-font font-medium items-center text-gray-900 mb-4 md: mb-0">
-    <h1 class="ml-3 text-3xl m-6"><%= t '.title' %></h1>
+    <h1 class="text-2xl text-gray-600 mx-auto px-6 py-3 text-center"><%= t '.title' %></h1>
       <article class="card">
         <div class='col-md-3'>
           <%= image_tag @question.photo.url, class: 'card-img-top img-fluid', size: '500x500' %>
@@ -8,17 +8,41 @@
         <div class="card-body">
           <div class='row'>
             <div class='col-md-9'>
-              <h5><%= @question.content %></h5>
-              <p><%= @question.comment %></p>
-              <p><%= t('.level', level: @question.level) %></p>
+              <h3 class="text-center text-2xl m-4"><%= t '.q' %>. <%= @question.content %></h5>
+              <h4 class="text-center text-xl mx-4 my-2">
+                <%= Question.human_attribute_name(:level) %>
+                <% case @question.level %>
+                  <% when "one" %>
+                    <%= icon 'fas', 'star' %>
+                    <%= icon 'far', 'star' %>
+                    <%= icon 'far', 'star' %>
+                  <% when "two" %>
+                    <%= icon 'fas', 'star' %>
+                    <%= icon 'fas', 'star' %>
+                    <%= icon 'far', 'star' %>
+                  <% else %>
+                    <%= icon 'fas', 'star' %>
+                    <%= icon 'fas', 'star' %>
+                    <%= icon 'fas', 'star' %>
+                <% end %>
+              </h4>
+              <h4 class="text-center text-xl mx-4 my-2"><%= @question.comment %></h4>
             </div>
           </div>
-          <div class="js-table-choice">
+          <div>
             <%= render 'choices/choices', { choices: @choices } %>
           </div>
-          <%= link_to t('defaults.edit'), edit_question_path(@question) %>
-          <%= link_to t('defaults.destroy'), question_path(@question), method: :delete %>
-          <%= link_to t('defaults.questions'), questions_path %>
+          <div class="text-right">
+            <%= link_to edit_question_path(@question) do %>
+              <%= icon 'fa', 'pen' %>
+            <% end %>
+            <%= link_to question_path(@question), method: :delete do %>
+              <%= icon 'fas', 'trash' %>
+            <% end %>
+          </div>
+          <div class="container mx-auto px-5 py-3 flex flex-col font-medium items-center title-font md: mb-0">
+            <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.questions'), questions_path %></button>
+          </div>
         </div>
       </article>
     </div>

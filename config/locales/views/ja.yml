@@ -44,6 +44,10 @@ ja:
       fail: "ログインに失敗しました"
     destroy:
       success: "ログアウトしました"
+  password_resets:
+    new:
+      title: "パスワードリセット申請"
+      password_reset: "パスワードリセット"
   mypages:
     show:
       title: "マイページ"

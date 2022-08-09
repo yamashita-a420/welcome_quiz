@@ -19,5 +19,5 @@ Rails.application.routes.draw do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
   resource :mypage, only: %i[show edit update]
-  resources :password_resets, only: %i[create edit update]
+  resources :password_resets, only: %i[new create edit update]
 end

@@ -81,6 +81,7 @@ ja:
       title: "Question 3"
   messages:
     index:
+      title: "メッセージ"
       mypage: "マイページ"
       new_question: "クイズをつくる"
       quizzes: "クイズ画面"

@@ -1,13 +1,9 @@
 <div class='nested-fields'>
   <div class="field">
     <%= f.label :content %>
-    <div class="flex items-center border-2 bg-gray-50 mb-2 py-2 px-3 rounded-2xl">
-      <%= f.text_field :content %>
-    </div>
+    <%= f.text_field :content, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
     <%= f.label :correct_answer %>
-    <div class="flex items-center border-2 bg-gray-50 mb-2 py-2 px-3 rounded-2xl">
-      <%= f.select :correct_answer, [['正解', 'correct' ], ['不正解', 'incorrect' ]] %>
-    </div>
+    <%= f.select :correct_answer, [['正解', 'correct' ], ['不正解', 'incorrect' ]], {}, {class: 'select select-bordered w-auto max-w-xs'} %>
     <%= link_to_remove_association "削除" , f %>
   </div>
 </div>

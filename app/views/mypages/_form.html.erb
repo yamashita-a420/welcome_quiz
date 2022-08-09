@@ -1,14 +1,9 @@
 <%= form_with model: @user, url: mypage_path do |f| %>
   <%= render 'shared/error_message', object: @user %>
+
   <%= f.label :name, User.human_attribute_name(:name) %>
-  <div class="flex items-center border-2 bg-gray-50 mb-5 py-2 px-3 rounded-2xl">
-    <%= f.text_field :name, class: "assign-form" %>
-  </div>
+  <%= f.text_field :name, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
   <%= f.label :email, User.human_attribute_name(:email) %>
-  <div class="flex items-center border-2 bg-gray-50 mb-5 py-2 px-3 rounded-2xl">
-    <%= f.text_field :email, class: "assign-form" %>
-  </div>
-  <div class="actions">
-    <%= f.submit t('defaults.update'), class:'block w-full bg-yellow-400 mt-3 py-2 rounded-2xl hover:bg-yellow-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2' %>
-  </div>
+  <%= f.text_field :email, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+  <%= f.submit t('defaults.update'), class:'btn btn-accent mb-5' %>
 <% end %>

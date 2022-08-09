@@ -12,10 +12,10 @@
     <% end %>
   </div>
 </div>-->
-<div class="hero min-h-screen bg-base-200">
+<div class="hero min-h-screen bg-amber-200">
   <div class="hero-content text-center">
     <div class="max-w-md">
-      <h1 class="text-5xl font-bold"><%= t('helpers.quiz') %></h1>
+      <h1 class="text-5xl font-app"><%= t('helpers.quiz') %></h1>
       <p class="py-6"><%= t('.welcome_message') %><br>ささやかですが<br>クイズをご用意しました<br>お楽しみ頂けたら幸いです</p>
       <%= form_with url: user_first_question_path(@first_question, user_id: @first_question.user_id), method: :get, local:true do |f| %>
         <%= f.hidden_field :second_question, :value => @second_question.id %>

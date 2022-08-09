@@ -22,7 +22,7 @@
   @apply pl-2 w-full outline-none border-none;
 }
 
-.common-container {
+.common_container {
   @apply container px-5 py-5 mx-auto;
 }
 

@@ -48,6 +48,13 @@ ja:
     new:
       title: "パスワードリセット申請"
       password_reset: "パスワードリセット"
+    create:
+      success: "パスワードリセット手順を送信しました"
+    edit:
+      title: "パスワードリセット"
+    update:
+      success: "パスワードを変更しました"
+      fail: "パスワードの変更に失敗しました"
   mypages:
     show:
       title: "マイページ"

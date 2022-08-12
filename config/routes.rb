@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   root 'static_pages#top'
   get 'login', to: 'user_sessions#new'
   post 'login', to: "user_sessions#create"
@@ -19,4 +21,5 @@ Rails.application.routes.draw do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
   resource :mypage, only: %i[show edit update]
+  resources :password_resets, only: %i[new create edit update]
 end

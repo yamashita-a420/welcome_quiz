@@ -121,12 +121,15 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://welcome-quiz-maker.herokuapp.com/' }
 
   config.action_mailer.delivery_method = :smtp
+
+  gmail_user_name = ENV['GMAIL_USER_NAME']
+  gmail_password = ENV['GMAIL_PASSWORD']
   config.action_mailer.smtp_settings = {
     address:"smtp.gmail.com",
     domain: 'gmail.com',
     port:587,
-    user_name: ENV['GMAIL_USER_NAME'],
-    password: ENV['GMAIL_PASSWORD'],
+    user_name: gmail_user_name,
+    password: gmail_password,
     authentication: :login
   }
 end

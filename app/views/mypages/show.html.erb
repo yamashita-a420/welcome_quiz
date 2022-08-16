@@ -16,15 +16,21 @@
     <button class="choice-btn">
       <%= link_to t('.edit'), edit_mypage_path %>
     </button>
-    <table class="table mx-6">
-      <tr>
-        <th scope="row"><%= User.human_attribute_name(:name) %></th>
-        <td><%= current_user.name %></td>
-      </tr>
-      <tr>
-        <th scope="row"><%= User.human_attribute_name(:email) %></th>
-        <td><%= current_user.email %></td>
-      </tr>
-    </table>
+    <div class="overflow-x-auto">
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th><%= User.human_attribute_name(:name) %></th>
+            <th><%= User.human_attribute_name(:email) %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= current_user.name %></td>
+            <td><%= current_user.email %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

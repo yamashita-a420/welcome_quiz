@@ -5,6 +5,7 @@ ja:
     register: "登録"
     logout: "ログアウト"
     password_forget: "パスワードをお忘れの方はこちら"
+    password_reset: "パスワードリセット手順を送信しました"
     edit: "編集"
     destroy: "削除"
     update: "更新"

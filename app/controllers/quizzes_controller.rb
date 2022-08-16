@@ -3,6 +3,7 @@ class QuizzesController < ApplicationController
   layout 'layouts/quiz_top'
 
   def index
-    @first_question, @second_question, @third_question = Question.all.sample(3)
+    user = User.find(params[:user_id])
+    @first_question, @second_question, @third_question = user.questions.sample(3)
   end
 end

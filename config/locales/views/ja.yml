@@ -78,6 +78,7 @@ ja:
   quizzes:
     index:
       welcome_message: "ようこそ！"
+      no_quiz: "クイズを３問以上つくると<br/>スタートボタンが表示されます"
       button: "スタート"
     show:
       title: "Welcome Quiz"

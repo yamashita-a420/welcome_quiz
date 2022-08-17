@@ -8,11 +8,5 @@
     <% else %>
       <p><%= t('.no_result') %></p>
     <% end %>
-    <!-- リンク -->
-    <div class="pt-5">
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.mypage'), mypage_path %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.new_question'), new_question_path %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.quizzes'), user_quizzes_path(user_id: current_user.id) %></button>
-    </div>
   </div>
 </div>

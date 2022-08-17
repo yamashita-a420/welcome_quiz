@@ -1,15 +1,6 @@
 <div class="common_container">
   <div class="flex flex-col title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
     <p class="font-medium text-3xl text-gray-900 m-4"><%= t '.title' %></p>
-
     <%= render 'form', question: @question %>
-
-    <div>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.top'), root_path %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.mypage'), mypage_path %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.new_question'), new_question_path %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.quizzes'), user_quizzes_path(user_id: current_user.id) %></button>
-      <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.preview'), '#' %></button>
-    </div>
   </div>
 </div>

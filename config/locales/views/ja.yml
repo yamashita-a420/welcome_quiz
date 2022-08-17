@@ -5,6 +5,7 @@ ja:
     register: "登録"
     logout: "ログアウト"
     password_forget: "パスワードをお忘れの方はこちら"
+    password_reset: "パスワードリセット手順を送信しました"
     edit: "編集"
     destroy: "削除"
     update: "更新"
@@ -25,8 +26,9 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      welcome_message: "ようこそ！"
-      try: "質問をつくってみる"
+      catch: "写真をクイズにして　あなたのストーリーをもっと伝えませんか？"
+      explain: "オリジナルのクイズ３つをランダム表示！<br/>結婚式などイベントの待ち時間に　ゲストに話のタネを提供しよう"
+      try: "質問をつくってみる<br/>※実装中です"
   users:
     new:
       title: "ユーザー登録"

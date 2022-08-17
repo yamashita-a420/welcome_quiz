@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to question_url(@question), success: t('defaults.message.created', item: Question.model_name.human)
+      redirect_to questions_path, success: t('defaults.message.created', item: Question.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: Question.model_name.human)
       render :new
@@ -28,10 +28,8 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
-    @question = Question.new(question_params)
-
-    if @question.save
-      redirect_to question_url(@question), success: t('defaults.message.updated', item: Question.model_name.human)
+    if @question.update(update_question_params)
+      redirect_to questions_path, success: t('defaults.message.updated', item: Question.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Question.model_name.human)
       render :edit
@@ -40,7 +38,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy!
-    redirect_to questions_url, success: t('defaults.message.deleted', item: Question.model_name.human)
+    redirect_to questions_path, success: t('defaults.message.deleted', item: Question.model_name.human)
   end
 
   private
@@ -50,6 +48,10 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer, :_destroy]).merge(user_id: current_user.id)
+    params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer]).merge(user_id: current_user.id)
+  end
+
+  def update_question_params
+  params.require(:question).permit(:photo, :photo_cache, :content, :comment, :level, choices_attributes: [:content, :correct_answer, :_destroy, :id]).merge(user_id: current_user.id)
   end
 end

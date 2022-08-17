@@ -25,10 +25,11 @@
   </head>
 
   <body>
-    <%= render 'shared/flash_message' %>
-    <div class="bg-amber-200">
-      <%= yield %>
-    </div>
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
     <%= render 'shared/footer' %>
   </body>
 </html>

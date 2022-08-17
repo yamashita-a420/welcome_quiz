@@ -1,11 +1,11 @@
 <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-    <h1 class="text-5xl font-app sm:text-4xl text-3xl mb-4 font-medium"><%= t('.title') %></h1>
     <div class="text-center lg:w-2/3 w-full">
-      <p class="mb-8 leading-relaxed py-6"><%= t('.welcome_message') %></p>
+      <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.catch')) %></h4>
+      <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.explain')) %></h4>
       <div class="flex flex-col justify-center items-center">
         <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
-          <%= link_to t('.try'), new_question_path %>
+          <%= link_to simple_format(t('.try')), new_question_path %>
         </button>
         <div>OR</div>
         <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">

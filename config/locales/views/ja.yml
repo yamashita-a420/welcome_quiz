@@ -26,8 +26,9 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      welcome_message: "ようこそ！"
-      try: "質問をつくってみる"
+      catch: "写真をクイズにして　あなたのストーリーをもっと伝えませんか？"
+      explain: "オリジナルのクイズ３つをランダム表示！<br/>結婚式などイベントの待ち時間に　ゲストに話のタネを提供しよう"
+      try: "質問をつくってみる<br/>※実装中です"
   users:
     new:
       title: "ユーザー登録"

@@ -1,14 +1,14 @@
 <section class="bg-hero-pattern text-gray-900 body-font">
   <div class="top-wrapper">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
       <div class="text-center lg:w-2/3 w-full">
-        <h4 class="text-xl text-accent mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.catch')) %></h4>
-        <h4 class="text-xl text-secondary mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.explain')) %></h4>
+        <h2 class="text-2xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.catch')) %></h4>
+        <h4 class="text-xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.explain')) %></h4>
         <div class="flex flex-col justify-center items-center">
           <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
             <%= link_to simple_format(t('.try')), new_question_path %>
           </button>
-          <div>OR</div>
+          <div class="text-base-100">OR</div>
           <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
             <%= link_to t('defaults.login'), login_path %>
           </button>
@@ -40,6 +40,7 @@
       <div class="card-body">
         <h2 class="card-title">QRコードを印刷</h2>
         <p>会場でQRコードを読み取って、クイズに参加してもらおう</p>
+        <p>QRコードは(株)デンソーウェーブの登録商標です</p>
         <div class="card-actions justify-end">
           <button class="btn btn-primary">QRコードのイメージ</button>
         </div>

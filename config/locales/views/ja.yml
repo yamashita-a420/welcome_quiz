@@ -14,6 +14,7 @@ ja:
     new_question: "クイズをつくる"
     quizzes: "チャレンジする"
     preview: "プレビュー画面"
+    qrcode: "QRコード"
     message:
       require_login: "ログインしてください"
       created: "%{item}を作成しました"
@@ -26,8 +27,8 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      catch: "写真をクイズにして　あなたのストーリーをもっと伝えませんか？"
-      explain: "オリジナルのクイズ３つをランダム表示！<br/>結婚式などイベントの待ち時間に　ゲストに話のタネを提供しよう"
+      catch: "写真をクイズにして<br/>あなたのストーリーを<br/>もっと伝えませんか？"
+      explain: "オリジナルのクイズ３つを<br/>ランダム表示！<br/>ゲストの待ち時間に<br/>話のタネを提供しよう"
       try: "質問をつくってみる<br/>※実装中です"
   users:
     new:
@@ -36,6 +37,8 @@ ja:
     create:
       success: "ユーザー登録が完了しました"
       fail: "ユーザー登録に失敗しました"
+    destroy:
+      success: "退会しました。ご利用ありがとうございました"
   user_sessions:
     new:
       title: "ログイン"
@@ -64,7 +67,10 @@ ja:
       edit: "プロフィール編集"
     edit:
       title: "プロフィール編集"
-      success: ""
+      title2: "退会"
+      delete: "退会時に削除される内容"
+      content: "・ニックネーム<br/>・メールアドレス<br/>・作成したクイズ（画像・文章）<br/>・届いたメッセージ"
+      withdrawal: "同意して退会"
   questions:
     index:
       title: "クイズ一覧"
@@ -118,6 +124,12 @@ ja:
       thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
       enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
       once_more: "＼もう一度挑戦する方はこちら／"
+  qrcodes:
+    show:
+      title: "クイズQRコード"
+      copyright: "© Welcome Quiz Maker"
+      usage: "印刷してご活用ください"
+      usage2: "右クリック→「印刷」"
   helpers:
     app: "Welcome Quiz Maker"
     quiz: "Welcome Quiz"

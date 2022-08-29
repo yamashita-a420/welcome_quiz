@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   delete 'message', to: 'messages#destroy'
   get 'qrcode', to: 'qrcodes#show'
 
-  resources :users, only: %i[new create] do
+  resources :users, only: %i[new create destroy] do
     resources :quizzes, only: %i[index]
     resources :first_questions, only: %i[show]
     resources :second_questions, only: %i[show]

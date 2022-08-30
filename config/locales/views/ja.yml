@@ -14,7 +14,7 @@ ja:
     new_question: "クイズをつくる"
     quizzes: "チャレンジする"
     preview: "プレビュー画面"
-    qrcode: "QRコード"
+    qrcode: "二次元バーコード"
     message:
       require_login: "ログインしてください"
       created: "%{item}を作成しました"
@@ -126,10 +126,10 @@ ja:
       once_more: "＼もう一度挑戦する方はこちら／"
   qrcodes:
     show:
-      title: "クイズQRコード"
+      title: "クイズ<br/>二次元バーコード"
       copyright: "© Welcome Quiz Maker"
       usage: "印刷してご活用ください"
-      usage2: "右クリック→「印刷」"
+      usage2: "読み取りに必要ですので<br/>4~5mmの余白を確保してください"
   helpers:
     app: "Welcome Quiz Maker"
     quiz: "Welcome Quiz"

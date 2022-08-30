@@ -1,16 +1,50 @@
-<section class="text-gray-600 body-font">
+<section class="bg-hero-pattern text-gray-900 body-font">
+  <div class="top-wrapper">
+    <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
+      <div class="text-center lg:w-2/3 w-full">
+        <h2 class="text-2xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.catch')) %></h4>
+        <h4 class="text-xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.explain')) %></h4>
+        <div class="flex flex-col justify-center items-center">
+          <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
+            <%= link_to simple_format(t('.try')), new_question_path %>
+          </button>
+          <div class="text-base-100">OR</div>
+          <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
+            <%= link_to t('defaults.login'), login_path %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-    <div class="text-center lg:w-2/3 w-full">
-      <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.catch')) %></h4>
-      <h4 class="text-xl mx-auto mt-6 px-6 py-3 text-center"><%= simple_format(t('.explain')) %></h4>
-      <div class="flex flex-col justify-center items-center">
-        <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
-          <%= link_to simple_format(t('.try')), new_question_path %>
-        </button>
-        <div>OR</div>
-        <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
-          <%= link_to t('defaults.login'), login_path %>
-        </button>
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">クイズをつくってみる</h2>
+        <p>クイズのつくり方・完成イメージを確認<br/>※ログイン不要です<br/>※準備中です</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">クイズをつくってみる</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">クイズにチャレンジ</h2>
+        <p>ログイン後<br/>クイズを３問以上つくると<br/>クイズに挑戦できます</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">ログイン</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">二次元バーコードを印刷</h2>
+        <p>スマホを使って、クイズに参加してもらおう</p>
+      </div>
+    </div>
+    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">メッセージをもらおう</h2>
+        <p>クイズが終わったら<br/>簡単なメッセージフォームが表示されます<br/></p>
       </div>
     </div>
   </div>

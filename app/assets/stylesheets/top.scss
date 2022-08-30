@@ -1,0 +1,10 @@
+.top-wrapper {
+  background-image: image-url('top_photos.jpg');
+  background-position: right;
+  background-size: cover;
+  width: 100%;
+}
+.top-wrapper::before {
+  content: '';
+  display: block;
+}

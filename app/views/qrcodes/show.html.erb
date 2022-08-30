@@ -1,0 +1,11 @@
+<div class="common-container">
+  <div class="flex flex-col title-font font-medium text-center items-center text-gray-900">
+    <h1 class="text-3xl m-6"><%= simple_format(t('.title')) %></h1>
+    <h4 class="text-xl mb-6"><%= t '.usage' %></h4>
+    <h4 class="text-xl mb-12"><%= simple_format(t('..usage2')) %></h4>
+    <div class="w-auto inline-block">
+      <%= image_tag qrcode_tag(@content) %>
+    </div>
+    <h4><%= t '.copyright' %></h4>
+  </div>
+</div>

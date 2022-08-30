@@ -44,6 +44,10 @@ gem 'net-pop'
 gem 'fog-aws'
 gem 'figaro'
 
+gem 'rqrcode', '~> 2.1', '>= 2.1.2'
+gem 'rqrcode_png', '~> 0.1.1'
+gem 'chunky_png', '~> 1.3', '>= 1.3.5'
+
 # Form
 gem 'cocoon'
 

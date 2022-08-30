@@ -24,7 +24,6 @@
 
 /public/assets
 /public/uploads
-/public/qrcode
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.

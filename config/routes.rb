@@ -11,11 +11,11 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create destroy] do
     resources :quizzes, only: %i[index]
-    resources :first_questions, only: %i[show]
-    resources :second_questions, only: %i[show]
-    resources :third_questions, only: %i[show]
-    get 'result', to: 'messages#new'
-    post 'result', to: 'messages#create'
+    post 'first_question', to: 'first_questions#show'
+    post 'second_question', to: 'second_questions#show'
+    post 'third_question', to: 'third_questions#show'
+    post 'result', to: 'messages#new'
+    post 'result_message', to: 'messages#create'
     get 'result/message_sent', to: 'messages#show'
   end
   resources :questions do

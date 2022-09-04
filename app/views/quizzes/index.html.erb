@@ -4,7 +4,7 @@
       <h1 class="text-5xl font-app"><%= t('helpers.quiz') %></h1>
       <% if @first_question && @second_question && @third_question %>
         <p class="py-6"><%= t('.welcome_message') %><br>ささやかですが<br>クイズをご用意しました<br>お楽しみ頂けたら幸いです</p>
-        <%= form_with url: user_first_question_path(@first_question, user_id: @first_question.user_id), method: :get, local:true do |f| %>
+        <%= form_with url: {controller: 'first_questions', action: 'show', user_id: @first_question.user_id, id: @first_question.id }, local:true do |f| %>
           <%= f.hidden_field :second_question, :value => @second_question.id %>
           <%= f.hidden_field :third_question, :value => @third_question.id %>
           <%= f.submit t('.button'), class: 'btn btn-accent' %>

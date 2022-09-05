@@ -1,12 +1,14 @@
 <div class="common_container">
   <div class="flex flex-col title-font font-medium items-center text-gray-900">
-    <h1 class="ml-3 text-3xl m-6"><%= t '.title' %></h1>
+    <h1 class="text-3xl m-6"><%= t '.title' %></h1>
 
     <%= render 'form', question: @question %>
 
-    <h1 class="ml-3 text-3xl m-6"><%= t '.title2' %></h1>
-    <h4 class="text-xl text- mx-auto mt-6 px-6 py-3"><%= simple_format(t('.withdrawal')) %></h4>
+    <h1 class="text-3xl m-6"><%= t '.title2' %></h1>
+    <h3 class="ml-3 text-2xl mt-3"><%= t '.about_delete' %></h3>
+    <h4 class="text-xl mx-auto px-6 py-3"><%= simple_format(t('.content')) %></h4>
+    <h4 class="link text-xl mx-auto my-6 px-6 py-3"><%= link_to t('.withdrawal'), user_path(@user), method: :delete  %></h4>
 
-    <%= link_to t('defaults.mypage'), mypage_path %>
+    <p class="text-accent"><%= link_to t('defaults.mypage'), mypage_path %></p>
   </div>
 </div>

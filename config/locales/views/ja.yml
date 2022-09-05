@@ -68,7 +68,7 @@ ja:
     edit:
       title: "プロフィール編集"
       title2: "退会"
-      delete: "退会時に削除される内容"
+      about_delete: "退会時に削除される内容"
       content: "・ニックネーム<br/>・メールアドレス<br/>・作成したクイズ（画像・文章）<br/>・届いたメッセージ"
       withdrawal: "同意して退会"
   questions:

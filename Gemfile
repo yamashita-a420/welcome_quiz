@@ -51,7 +51,11 @@ gem 'chunky_png', '~> 1.3', '>= 1.3.5'
 # Form
 gem 'cocoon'
 
+# Control Constant
 gem 'config', '~> 4.0'
+
+# For SEO
+gem 'meta-tags'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

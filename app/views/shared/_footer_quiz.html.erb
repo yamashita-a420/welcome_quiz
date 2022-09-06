@@ -1,10 +1,14 @@
-<footer class="bg-amber-200 text-gray-600 body-font">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row">
-    <div class="title-font font-medium md:justify-start justify-center text-gray-900 ml-3 text-m">
-      <%= link_to t('helpers.app'), root_path %>
-    </div>
-    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-      © 2022 Welcome Quiz Maker
-    </p>
+<footer class="footer footer-center p-4 bg-amber-200 text-base-content rounded">
+  <div class="grid grid-flow-col gap-4 mt-6">
+    <label for="terms-modal" class="link link-hover modal-button">利用規約</label>
+    <label for="policy-modal" class="link link-hover modal-button">プライバシーポリシー</label>
+    <label for="inquiry-modal" class="link link-hover modal-button">お問い合わせ</label>
+  </div>
+  <div>
+    <p>Copyright © 2022 - All right reserved by</p>
+    <div class="link link-hover"><%= link_to 'Welcome Quiz Maker', root_path %></div>
   </div>
 </footer>
+<div><%= render 'shared/helps/terms_of_service' %></div>
+<div><%= render 'shared/helps/privacy_policy' %></div>
+<div><%= render 'shared/helps/inquiry' %></div>

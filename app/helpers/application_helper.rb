@@ -20,11 +20,11 @@ module ApplicationHelper
   end
 
   def separate_header
-    if controller_name == ('first_questions' || 'second_questions' || 'third_questions')
+    if controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
       render 'shared/headers/header_quiz'
     elsif (controller_name == 'quizzes') && (action_name == 'index')
-      render 'shared/headers/header_result'
-    elsif (controller_name == 'messages') && (action_name == ('new' || 'show'))
+      render 'shared/headers/header_quiz'
+    elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
       render 'shared/headers/header_result'
     else
       login_header
@@ -34,9 +34,9 @@ module ApplicationHelper
   def separate_footer
     if (controller_name == 'quizzes') && (action_name == 'index')
       render 'shared/footers/footer_quiz'
-    elsif controller_name == ('first_questions' || 'second_questions' || 'third_questions')
+    elsif controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
       render 'shared/footers/footer_quiz'
-    elsif (controller_name == 'messages') && (action_name == ('new' || 'show'))
+    elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
       render 'shared/footers/footer_result'
     else
       render 'shared/footers/footer'

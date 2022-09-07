@@ -12,7 +12,7 @@ module ApplicationHelper
       noindex: !Rails.env.production?,
       icon: [
         { href: image_url('favicon.png') },
-        { href: image_url('favicon.png'), rel: 'favicon.png' }
+        { href: image_url('logo.png'), rel: 'logo.png' }
       ],
       og: defalut_og,
       twitter: default_twitter_card,
@@ -28,7 +28,7 @@ module ApplicationHelper
       description: :description,
       type: 'website',
       url: request.original_url,
-      image: image_url('favicon.png'),
+      image: image_url('logo.png'),
       locale: 'ja_JP',
     }
   end

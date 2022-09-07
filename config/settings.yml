@@ -1,0 +1,11 @@
+sitename: Welcome Quiz Maker
+site:
+  name: Welcome Quiz Maker
+  description: ゲストの待ち時間にオリジナルクイズを！ウェルカムクイズメーカー
+  keywords: オリジナルクイズ,待合室,レセプション,結婚式
+  page_title: Welcome Quiz Maker
+  page_description: Welcome Quiz Maker
+  meta:
+    ogp:
+      type: website
+      image_path: https://dummyimage.com/1200x630/888/fff

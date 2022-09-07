@@ -26,11 +26,7 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <%= render 'shared/header' %>
-    <% else %>
-      <%= render 'shared/before_login_header' %>
-    <% end %>
-    <%= render 'shared/footer' %>
+    <%= separate_header %>
+    <%= separate_footer %>
   </body>
 </html>

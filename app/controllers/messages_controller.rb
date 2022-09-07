@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   skip_before_action :require_login, only: %i[new create show]
-  layout 'layouts/result'
 
   def index
     @messages = current_user.messages.order(created_at: :desc)

@@ -22,6 +22,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
+    @user = User.find(params[:user_id])
     if @message.save
       redirect_to user_result_message_sent_path(message: message_quiz_params)
     else

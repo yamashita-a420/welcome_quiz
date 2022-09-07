@@ -101,10 +101,8 @@ ja:
       title: "Question 3"
   messages:
     index:
-      title: "メッセージ"
-      mypage: "マイページ"
-      new_question: "クイズをつくる"
-      quizzes: "クイズ画面"
+      title: "メッセージ一覧"
+      no_message: "メッセージがありません"
     new:
       title: "Check the answer!"
       score: "＼%{score}問正解／"

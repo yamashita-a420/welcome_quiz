@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= display_meta_tags(default_meta_tags) %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8TT3WVW8L"></script>
     <script>
@@ -10,10 +15,6 @@
 
       gtag('config', 'G-T8TT3WVW8L');
     </script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= display_meta_tags(default_meta_tags) %>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

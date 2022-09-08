@@ -19,6 +19,26 @@ module ApplicationHelper
     }
   end
 
+  def separate_header
+    if ((controller_name == 'quizzes') && (action_name == 'index')) || controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
+      render 'shared/headers/header_quiz'
+    elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
+      render 'shared/headers/header_result'
+    else
+      login_header
+    end
+  end
+
+  def separate_footer
+    if ((controller_name == 'quizzes') && (action_name == 'index')) || controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
+      render 'shared/footers/footer_quiz'
+    elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
+      render 'shared/footers/footer_result'
+    else
+      render 'shared/footers/footer'
+    end
+  end
+
   private
 
   def defalut_og
@@ -38,5 +58,13 @@ module ApplicationHelper
       card: 'summary',
       site: '@WelcomeQuizMake',
     }
+  end
+
+  def login_header
+    if logged_in?
+      render 'shared/headers/header'
+    else
+      render 'shared/headers/before_login_header'
+    end
   end
 end

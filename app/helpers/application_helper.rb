@@ -48,14 +48,14 @@ module ApplicationHelper
       description: :description,
       type: 'website',
       url: request.original_url,
-      image: image_url('logo.png'),
+      image: image_url('ogp.png'),
       locale: 'ja_JP',
     }
   end
 
   def default_twitter_card
     {
-      card: 'summary',
+      card: 'summary_large_image',
       site: '@WelcomeQuizMake',
     }
   end

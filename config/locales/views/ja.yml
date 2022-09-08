@@ -122,6 +122,7 @@ ja:
       score: "＼%{score}問正解／"
       thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
       enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
+      share: "＼結果をシェア！／"
       once_more: "＼もう一度挑戦する方はこちら／"
   qrcodes:
     show:

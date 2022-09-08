@@ -21,7 +21,7 @@
         <div class="bg-base-100">
           <div class="result-container title-font md: mb-0">
             <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.share')) %></h4>
-            <%= render 'twitter_point' %>
+            <%= render 'twitter_point', user: @user, score: @score %>
           </div>
           <div class="result-container title-font md: mb-0">
             <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.once_more')) %></h4>

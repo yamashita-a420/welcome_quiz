@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     post 'third_question', to: 'third_questions#show'
     post 'result', to: 'messages#new'
     post 'result_message', to: 'messages#create'
-    get 'result/message_sent', to: 'messages#show'
+    get 'result_message_sent', to: 'messages#show'
   end
   resources :questions do
     resources :choices, only: %i[new create edit update destroy], shallow: true

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create destroy] do
     resources :quizzes, only: %i[index]
+    resources :take_quizzes, only: %i[index]
     post 'first_question', to: 'first_questions#show'
     post 'second_question', to: 'second_questions#show'
     post 'third_question', to: 'third_questions#show'

@@ -1,0 +1,73 @@
+<div class="bg-amber-200">
+  <div class="quiz">
+    <div class="quiz-container title-font md: mb-0">
+      <div id="panelQuiz-1" class="quiz__panel active">
+        <div class="quiz-title"><%= t '.title' %></div>
+        <%= render 'take_quizzes/question', question: @question_1 %>
+
+        <div class="quiz__select">
+          <div class="quiz__select-item">
+            <label class="custom-radio">
+              <input type="radio" name="quiz_1" value="aaaa">
+              <span class="custom-label"><%= @choices_1.shift %></span>
+            </label>
+          </div>
+          <div class="quiz__select-item">
+            <label class="custom-radio">
+              <input type="radio" name="quiz_1" value="bbbb">
+              <span class="custom-label"><%= @choices_1.shift %></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz__next">
+          <button class="quiz__next--button" data-target="panelQuiz-2" data-check="quiz_1">
+            次の設問へ
+          </button>
+        </div>
+      </div>
+
+      <div id="panelQuiz-2" class="quiz__panel">
+        <div class="quiz__title">
+          Question 2
+        </div>
+        <%= render 'take_quizzes/question', question: @question_2 %>
+
+
+        <div class="quiz__select">
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="cccc">
+                  <span class="custom-label"><%= @choices_2.shift %></span>
+              </label>
+          </div>
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="dddd">
+                  <span class="custom-label"><%= @choices_2.shift %></span>
+              </label>
+          </div>
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="eeee">
+                  <span class="custom-label"><%= @choices_2.shift %></span>
+              </label>
+          </div>
+        </div>
+
+        <div class="quiz__next">
+          <button class="quiz__next--button" data-target="panelQuiz-3">
+            次の設問へ
+          </button>
+        </div>
+
+        <div class="quiz__prev">
+          <button class="quiz__prev--link" data-target="panelQuiz-1">
+            前の設問へ戻る
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

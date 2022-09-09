@@ -17,3 +17,4 @@ require("jquery")
 require("@nathanvda/cocoon")
 
 import "../question/common.js"
+import "../quiz/quiz.js"

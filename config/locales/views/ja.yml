@@ -27,8 +27,8 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      catch: "写真をクイズにして<br/>あなたのストーリーを<br/>もっと伝えませんか？"
-      explain: "オリジナルのクイズ３つを<br/>ランダム表示！<br/>ゲストの待ち時間に<br/>話のタネを提供しよう"
+      catch: "オリジナルクイズで<br/>ゲストのおもてなし"
+      explain: "クイズ３つをランダム表示！<br/>思い出や豆知識から<br/>話のタネを提供しよう"
       try: "クイズをつくってみる<br/>※準備中です"
   users:
     new:

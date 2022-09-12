@@ -67,6 +67,47 @@
           </button>
         </div>
       </div>
+
+      <div id="panelQuiz-2" class="quiz__panel">
+        <div class="quiz__title">
+          Question 3
+        </div>
+        <%= render 'take_quizzes/question', question: @question_2 %>
+
+
+        <div class="quiz__select">
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="cccc">
+                  <span class="custom-label"><%= @choices_3.shift %></span>
+              </label>
+          </div>
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="dddd">
+                  <span class="custom-label"><%= @choices_3.shift %></span>
+              </label>
+          </div>
+          <div class="quiz__select-item">
+              <label class="custom-radio">
+                  <input type="radio" name="quiz_2" value="eeee">
+                  <span class="custom-label"><%= @choices_3.shift %></span>
+              </label>
+          </div>
+        </div>
+
+        <div class="quiz__next">
+          <button class="quiz__next--button" data-target="panelQuiz-3">
+            回答する
+          </button>
+        </div>
+
+        <div class="quiz__prev">
+          <button class="quiz__prev--link" data-target="panelQuiz-1">
+            前の設問へ戻る
+          </button>
+        </div>
+      </div>
     </div>
 
   </div>

@@ -1,8 +1,6 @@
-<%= form_with url: {controller: 'second_questions', action: 'show', user_id: @third_question.user_id, id: @second_question.id }, local:true do |f| %>
-  <!-- 設定したquestionの情報 -->
-  <%= f.hidden_field :first_question, :value => @first_question.id %>
-  <%= f.hidden_field :third_question, :value => @third_question.id %>
-  <!-- 回答したchoiceの情報 -->
-  <%= f.hidden_field :first_choice, :value => choice.id %>
-  <%= f.submit choice.content, class: 'choice-btn hover:bg-yellow-600 focus:outline-none focus:shadow-outline' %>
-<% end %>
+<div class="quiz__select-item">
+  <label class="custom-radio">
+    <input type="radio" name="quiz_#{num}" value="#{choice.correct_answer}">
+    <span class="custom-label"><%= choices.shift if choices %></span>
+  </label>
+</div>

@@ -1,6 +1,6 @@
 class Admin::UsersController < Admin::BaseController
   def index
-    @users = User.all.order(created_at: :desc).page(params[:page])
+    @pagy, @users = pagy(User.all.order(created_at: :desc))
   end
 
   def show

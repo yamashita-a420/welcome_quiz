@@ -12,6 +12,8 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード確認"
+        role: "権限"
+        created_at: "登録日時"
       question:
         photo: "写真"
         content: "質問文"
@@ -36,3 +38,7 @@ ja:
       correct_answer:
         incorrect: "不正解"
         correct: "正解"
+    user:
+      role:
+        general: "一般"
+        admin: "管理者"

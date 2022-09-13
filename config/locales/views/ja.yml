@@ -6,6 +6,7 @@ ja:
     logout: "ログアウト"
     password_forget: "パスワードをお忘れの方はこちら"
     password_reset: "パスワードリセット手順を送信しました"
+    show: "詳細"
     edit: "編集"
     destroy: "削除"
     update: "更新"
@@ -14,7 +15,7 @@ ja:
     new_question: "クイズをつくる"
     quizzes: "チャレンジする"
     preview: "プレビュー画面"
-    qrcode: "二次元バーコード"
+    qrcode: "２次元バーコード"
     message:
       require_login: "ログインしてください"
       created: "%{item}を作成しました"

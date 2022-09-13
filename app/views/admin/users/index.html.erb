@@ -13,10 +13,11 @@
             <tr
               class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
             >
-              <th class="px-4 py-3"><%= User.human_attribute_name(:id) %></th>
               <th class="px-4 py-3"><%= User.human_attribute_name(:name) %></th>
+              <th class="px-4 py-3"><%= User.human_attribute_name(:email) %></th>
               <th class="px-4 py-3"><%= User.human_attribute_name(:role) %></th>
               <th class="px-4 py-3"><%= User.human_attribute_name(:created_at) %></th>
+              <th class="px-4 py-3"></th>
             </tr>
           </thead>
           <tbody
@@ -29,12 +30,9 @@
       <div
         class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
       >
-        <span class="flex items-center col-span-3">
-          Showing 21-30 of 100
-        </span>
-        <span class="col-span-2"></span>
         <!-- Pagination -->
-        <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+        <%== pagy_nav_js(@pagy) %>
+        <!--<span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
           <nav aria-label="Table navigation">
             <ul class="inline-flex items-center">
               <li>
@@ -120,7 +118,7 @@
               </li>
             </ul>
           </nav>
-        </span>
+        </span>-->
       </div>
     </div>
 </main>

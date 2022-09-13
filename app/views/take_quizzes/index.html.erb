@@ -5,7 +5,7 @@
         <div id="panelQuiz-1" class="quiz__panel active">
           <div class="quiz-title"><%= t '.title_1' %></div>
 
-          <%= render 'take_quizzes/question', question: @question_1 %>
+          <%= render 'take_quizzes/question', question: @quiz_1 %>
 
           <div class="quiz__select">
             <%# <!--<%= render partial: 'take_quizzes/choices', locals: { choices: @choices_1, num: 1 } %>
@@ -33,7 +33,7 @@
         <div id="panelQuiz-2" class="quiz__panel">
           <div class="quiz-title"><%= t '.title_2' %></div>
 
-          <%= render 'take_quizzes/question', question: @question_2 %>
+          <%= render 'take_quizzes/question', question: @quiz_2 %>
 
           <div class="quiz__select">
             <div class="quiz__select-item">
@@ -72,7 +72,7 @@
         <div id="panelQuiz-3" class="quiz__panel">
           <div class="quiz-title"><%= t '.title_3' %></div>
 
-          <%= render 'take_quizzes/question', question: @question_3 %>
+          <%= render 'take_quizzes/question', question: @quiz_3 %>
 
           <div class="quiz__select">
             <div class="quiz__select-item">
@@ -94,9 +94,9 @@
                 </label>
             </div>
           </div>
-          <%= f.hidden_field :question_1, :value => @question_1.id %>
-          <%= f.hidden_field :question_2, :value => @question_2.id %>
-          <%= f.hidden_field :question_3, :value => @question_3.id %>
+          <%= f.hidden_field :quiz_1, :value => @quiz_1.id %>
+          <%= f.hidden_field :quiz_2, :value => @quiz_2.id %>
+          <%= f.hidden_field :quiz_3, :value => @quiz_3.id %>
           <div class="quiz__next">
             <button class="quiz__next--button" data-target="panelQuiz-3" data-check="choice_3">
               回答する

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create destroy] do
     resources :quizzes, only: %i[index]
+    resources :take_quizzes, only: %i[index]
     post 'first_question', to: 'first_questions#show'
     post 'second_question', to: 'second_questions#show'
     post 'third_question', to: 'third_questions#show'
@@ -23,4 +24,8 @@ Rails.application.routes.draw do
   end
   resource :mypage, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
+  namespace :admin do
+    root 'dashboards#index'
+    # resources :users, only: %i[index show edit update destroy]
+  end
 end

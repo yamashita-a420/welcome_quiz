@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pundit::Authorization
+  include Pagy::Backend
   add_flash_types :success, :info, :warning, :danger
   before_action :require_login
 

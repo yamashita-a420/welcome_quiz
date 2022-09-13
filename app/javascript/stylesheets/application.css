@@ -31,7 +31,7 @@
 }
 
 .quiz-title {
-  @apply text-2xl mx-auto px-6 py-3 text-center;
+  @apply text-2xl mx-auto text-center;
 }
 
 .result-container {

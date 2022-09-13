@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   end
   resource :mypage, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
+  namespace :admin do
+    root 'dashboards#index'
+  end
 end

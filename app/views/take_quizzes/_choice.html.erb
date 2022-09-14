@@ -1,6 +1,6 @@
 <div class="quiz__select-item">
   <label class="custom-radio">
-    <input type="radio" name="quiz_#{num}" value="#{choice.correct_answer}">
-    <span class="custom-label"><%= choices.shift if choices %></span>
+    <input type="radio" name="choice_<%= number %>" value="<%= choice.id %>">
+    <span class="custom-label"><%= choice.content %></span>
   </label>
 </div>

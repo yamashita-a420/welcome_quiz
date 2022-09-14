@@ -1,28 +1,14 @@
 <div class="bg-amber-200">
   <div class="quiz">
     <div class="quiz-container title-font md: mb-0">
-      <%= form_with url: {controller: 'messages', action: 'new', user_id: @user.id }, local:true do |f| %>
+      <%= form_with url: user_result_path(user_id: @user.id), local:true do |f| %>
+
         <div id="panelQuiz-1" class="quiz__panel active">
           <div class="quiz-title"><%= t '.title_1' %></div>
-
           <%= render 'take_quizzes/question', question: @quiz_1 %>
-
           <div class="quiz__select">
-            <%# <!--<%= render partial: 'take_quizzes/choices', locals: { choices: @choices_1, num: 1 } %>
-            <div class="quiz__select-item">
-              <label class="custom-radio">
-                <input type="radio" name="choice_1" value="<%= @choices_1[0] %>">
-                <span class="custom-label"><%= @choices_1.shift %></span>
-              </label>
-            </div>
-            <div class="quiz__select-item">
-              <label class="custom-radio">
-                <input type="radio" name="choice_1" value="<%= @choices_1[1] %>">
-                <span class="custom-label"><%= @choices_1.shift %></span>
-              </label>
-            </div>
+            <%= render 'take_quizzes/choices', { choices: @choices_1, number: @num_1 } %>
           </div>
-
           <div class="quiz__next">
             <button type="button" class="quiz__next--button" data-target="panelQuiz-2" data-check="choice_1">
               次の問題へ
@@ -32,36 +18,15 @@
 
         <div id="panelQuiz-2" class="quiz__panel">
           <div class="quiz-title"><%= t '.title_2' %></div>
-
           <%= render 'take_quizzes/question', question: @quiz_2 %>
-
           <div class="quiz__select">
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_2" value="<%= @choices_2[0] %>">
-                    <span class="custom-label"><%= @choices_2.shift %></span>
-                </label>
-            </div>
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_2" value="<%= @choices_2[1] %>">
-                    <span class="custom-label"><%= @choices_2.shift %></span>
-                </label>
-            </div>
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_2" value="<%= @choices_2[2] %>">
-                    <span class="custom-label"><%= @choices_2.shift %></span>
-                </label>
-            </div>
+            <%= render 'take_quizzes/choices', { choices: @choices_2, number: 2 } %>
           </div>
-
           <div class="quiz__next">
             <button type="button" class="quiz__next--button" data-target="panelQuiz-3" data-check="choice_2">
               次の問題へ
             </button>
           </div>
-
           <div class="quiz__prev">
             <button type="button" class="quiz__prev--link" data-target="panelQuiz-1">
               前の問題へ戻る
@@ -71,28 +36,9 @@
 
         <div id="panelQuiz-3" class="quiz__panel">
           <div class="quiz-title"><%= t '.title_3' %></div>
-
           <%= render 'take_quizzes/question', question: @quiz_3 %>
-
           <div class="quiz__select">
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_3" value="<%= @choices_3[0] %>">
-                    <span class="custom-label"><%= @choices_3.shift %></span>
-                </label>
-            </div>
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_3" value="<%= @choices_3[1] %>">
-                    <span class="custom-label"><%= @choices_3.shift %></span>
-                </label>
-            </div>
-            <div class="quiz__select-item">
-                <label class="custom-radio">
-                    <input type="radio" name="choice_3" value="<%= @choices_3[2] %>">
-                    <span class="custom-label"><%= @choices_3.shift %></span>
-                </label>
-            </div>
+            <%= render 'take_quizzes/choices', { choices: @choices_3, number: 3 } %>
           </div>
           <%= f.hidden_field :quiz_1, :value => @quiz_1.id %>
           <%= f.hidden_field :quiz_2, :value => @quiz_2.id %>
@@ -102,7 +48,6 @@
               回答する
             </button>
           </div>
-
           <div class="quiz__prev">
             <button type="button" class="quiz__prev--link" data-target="panelQuiz-2">
               前の問題へ戻る
@@ -111,6 +56,5 @@
         </div>
       <% end %>
     </div>
-
   </div>
 </div>

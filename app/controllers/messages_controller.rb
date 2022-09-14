@@ -14,9 +14,9 @@ class MessagesController < ApplicationController
     @quiz_2 = Question.find(params[:quiz_2])
     @quiz_3 = Question.find(params[:quiz_3])
     #回答したchoiceの情報
-    @choice_1 = Choice.find_by(content: params[:choice_1])
-    @choice_2 = Choice.find_by(content: params[:choice_2])
-    @choice_3 = Choice.find_by(content: params[:choice_3])
+    @choice_1 = Choice.find(params[:choice_1])
+    @choice_2 = Choice.find(params[:choice_2])
+    @choice_3 = Choice.find(params[:choice_3])
     #正解数
     @score = [@choice_1, @choice_2, @choice_3].map{|x| x.scoring(@choice_1)}.map(&:to_i).sum
   end
@@ -62,6 +62,6 @@ class MessagesController < ApplicationController
   end
 
   def quiz_params
-    params.require(:message).permit(:quiz_1, :quiz_2, :quiz_3, :choice_1, :choice_2, :choices_3).to_h
+    params.require(:message).permit(:quiz_1, :quiz_2, :quiz_3, :choice_1, :choice_2, :choice_3).to_h
   end
 end

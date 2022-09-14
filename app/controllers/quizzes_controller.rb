@@ -2,7 +2,6 @@ class QuizzesController < ApplicationController
   skip_before_action :require_login, only: %i[index]
 
   def index
-    user = User.find(params[:user_id])
-    @first_question, @second_question, @third_question = user.questions.sample(3)
+    @user = User.find(params[:user_id])
   end
 end

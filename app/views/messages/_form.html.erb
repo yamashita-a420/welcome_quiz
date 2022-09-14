@@ -8,12 +8,12 @@
   <div class="flex items-center mb-5 py-2 px-3 rounded-2xl">
     <%= f.text_area :body, class: 'textarea textarea-secondary w-full max-w-xs' %>
   </div>
-  <%= f.hidden_field :first_question, :value => @first_question.id %>
-  <%= f.hidden_field :second_question, :value => @second_question.id %>
-  <%= f.hidden_field :third_question, :value => @third_question.id %>
-  <%= f.hidden_field :first_choice, :value => @first_choice.id %>
-  <%= f.hidden_field :second_choice, :value => @second_choice.id %>
-  <%= f.hidden_field :third_choice, :value => @third_choice.id %>
+  <%= f.hidden_field :quiz_1, :value => @quiz_1.id %>
+  <%= f.hidden_field :quiz_2, :value => @quiz_2.id %>
+  <%= f.hidden_field :quiz_3, :value => @quiz_3.id %>
+  <%= f.hidden_field :choice_1, :value => @choice_1.id %>
+  <%= f.hidden_field :choice_2, :value => @choice_2.id %>
+  <%= f.hidden_field :choice_3, :value => @choice_3.id %>
   <div class="flex items-center mb-5 py-2 px-3 rounded-2xl">
     <%= f.submit class:'btn btn-yellow-400 w-full max-w-xs mt-3 py-2'%>
   </div>

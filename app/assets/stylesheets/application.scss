@@ -1,8 +1,17 @@
 @import 'top';
+@import 'quizzes';
 @import 'font-awesome';
-
 @import "tailwindcss/base";
 
+html {
+  font-size: 1rem;
+}
+
+body {
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #374151;
+}
 
 .pagy-nav,
 .pagy-nav-js {

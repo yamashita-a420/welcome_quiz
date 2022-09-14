@@ -2,13 +2,9 @@
   <div class="hero-content text-center">
     <div class="max-w-md">
       <h1 class="text-5xl font-app"><%= t('helpers.quiz') %></h1>
-      <% if @first_question && @second_question && @third_question %>
+      <% if @user.questions.count >= 3 %>
         <p class="py-6"><%= t('.welcome_message') %><br>ささやかですが<br>クイズをご用意しました<br>お楽しみ頂けたら幸いです</p>
-        <%= form_with url: {controller: 'first_questions', action: 'show', user_id: @first_question.user_id, id: @first_question.id }, local:true do |f| %>
-          <%= f.hidden_field :second_question, :value => @second_question.id %>
-          <%= f.hidden_field :third_question, :value => @third_question.id %>
-          <%= f.submit t('.button'), class: 'btn btn-accent' %>
-        <% end %>
+        <%= button_to 'スタート', user_take_quizzes_path(user_id: @user.id), class: "btn btn-accent", method: :get %>
       <% else %>
         <p class="py-6"><%= simple_format(t('.no_quiz')) %></p>
         <button class="btn btn-accent mt-5">

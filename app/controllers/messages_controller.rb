@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   skip_before_action :require_login, only: %i[new create show]
+  before_action :set_result, only: %i[create show]
 
   def index
     @messages = current_user.messages.order(created_at: :desc)
@@ -8,51 +9,31 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     @user = User.find(params[:user_id])
-    # 表示するquestion
-    @first_question = Question.find(params[:first_question])
-    @second_question = Question.find(params[:second_question])
-    @third_question = Question.find(params[:third_question])
-    # 回答したchoiceの情報
-    @first_choice = Choice.find(params[:first_choice])
-    @second_choice = Choice.find(params[:second_choice])
-    @third_choice = Choice.find(params[:third_choice])
-    # 正解数
-    @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
+    #表示するquestion
+    @quiz_1 = Question.find(params[:quiz_1])
+    @quiz_2 = Question.find(params[:quiz_2])
+    @quiz_3 = Question.find(params[:quiz_3])
+    #回答したchoiceの情報
+    @choice_1 = Choice.find(params[:choice_1])
+    @choice_2 = Choice.find(params[:choice_2])
+    @choice_3 = Choice.find(params[:choice_3])
+    #正解数
+    @score = [@choice_1, @choice_2, @choice_3].map{|x| x.scoring(@choice_1)}.map(&:to_i).sum
   end
 
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to user_result_message_sent_path(message: message_quiz_params)
+      redirect_to user_result_message_sent_path(message: quiz_params)
     else
       redirect_to user_result_message_sent_path(message: quiz_params)
     end
-    # 表示するquestion
-    @first_question = Question.find(params[:message][:first_question])
-    @second_question = Question.find(params[:message][:second_question])
-    @third_question = Question.find(params[:message][:third_question])
-    # 回答したchoiceの情報
-    @first_choice = Choice.find(params[:message][:first_choice])
-    @second_choice = Choice.find(params[:message][:second_choice])
-    @third_choice = Choice.find(params[:message][:third_choice])
-    # 正解数
-    @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
   end
 
   def show
     @message = Message.find_by(message_params)
     @new_message = Message.new(message_params)
     @user = User.find(params[:user_id])
-    # 表示するquestion
-    @first_question = Question.find(params[:message][:first_question])
-    @second_question = Question.find(params[:message][:second_question])
-    @third_question = Question.find(params[:message][:third_question])
-    # 回答したchoiceの情報
-    @first_choice = Choice.find(params[:message][:first_choice])
-    @second_choice = Choice.find(params[:message][:second_choice])
-    @third_choice = Choice.find(params[:message][:third_choice])
-    # 正解数
-    @score = @first_choice.scoring(@first_choice).to_i + @second_choice.scoring(@second_choice).to_i + @third_choice.scoring(@third_choice).to_i
   end
 
   def destroy
@@ -63,15 +44,24 @@ class MessagesController < ApplicationController
 
   private
 
+  def set_result
+    # 表示するquestion
+    @quiz_1 = Question.find(params[:message][:quiz_1])
+    @quiz_2 = Question.find(params[:message][:quiz_2])
+    @quiz_3 = Question.find(params[:message][:quiz_3])
+    # 回答したchoiceの情報
+    @choice_1 = Choice.find(params[:message][:choice_1])
+    @choice_2 = Choice.find(params[:message][:choice_2])
+    @choice_3 = Choice.find(params[:message][:choice_3])
+    # 正解数
+    @score = [@choice_1, @choice_2, @choice_3].map{|x| x.scoring(x)}.map(&:to_i).sum
+  end
+
   def message_params
     params.require(:message).permit(:name, :body).merge(user_id: params[:user_id])
   end
 
   def quiz_params
-    params.require(:message).permit(:first_question, :second_question, :third_question, :first_choice, :second_choice, :third_choice)
-  end
-
-  def message_quiz_params
-    params.require(:message).permit(:name, :body, :first_question, :second_question, :third_question, :first_choice, :second_choice, :third_choice)
+    params.require(:message).permit(:quiz_1, :quiz_2, :quiz_3, :choice_1, :choice_2, :choice_3).to_h
   end
 end

@@ -84,7 +84,7 @@ ja:
       choices: "選択肢"
     edit:
       title: "クイズ編集"
-  quizzes:
+  quiz_tops:
     index:
       welcome_message: "ようこそ！"
       no_quiz: "クイズを３問以上つくると<br/>スタートボタンが表示されます"

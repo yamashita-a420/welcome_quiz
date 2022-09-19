@@ -9,10 +9,10 @@
       <%= link_to t('defaults.questions'), questions_path %>
     </button>
     <button class="choice-btn">
-      <%= link_to t('defaults.quiz'), quiz_path %>
+      <%= link_to t('defaults.quiz'), quiz_top_path %>
     </button>
     <button class="choice-btn">
-      <%= link_to t('defaults.quizzes'), user_quizzes_path(current_user) %>
+      <%= link_to t('defaults.quizzes'), user_quiz_top_path(current_user) %>
     </button>
     <button class="choice-btn">
       <%= link_to t('defaults.qrcode'), qrcode_path %>

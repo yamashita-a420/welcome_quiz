@@ -1,13 +1,14 @@
 <div class="hero min-h-screen bg-amber-200">
   <div class="hero-content text-center">
     <div class="max-w-md">
-      <h1 class="text-5xl font-app"><%= t('helpers.quiz') %></h1>
+      <h1 class="text-5xl font-app"><%= @quiz_top.title %></h1>
+      <%= image_tag @quiz_top.quiz_tops.url, class: 'card-img-top img-fluid', size: '300x300' %>
+      <p class="py-6"><%= @quiz_top.explain %></p>
       <% if @user.questions.count >= 3 %>
-        <p class="py-6"><%= t('.welcome_message') %><br>ささやかですが<br>クイズをご用意しました<br>お楽しみ頂けたら幸いです</p>
         <%= button_to 'スタート', user_take_quizzes_path(user_id: @user.id), class: "btn btn-accent", method: :get %>
       <% else %>
         <p class="py-6"><%= simple_format(t('.no_quiz')) %></p>
-        <button class="btn btn-accent mt-5">
+        <button class="btn btn-primary mt-5">
           <%= link_to t('defaults.new_question'), new_question_path %>
         </button>
       <% end %>

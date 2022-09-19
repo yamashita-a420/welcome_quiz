@@ -1,8 +1,19 @@
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('.title') %></h1>
-      <%= render partial: 'quizzes/question', collection: @questions %>
+<div class="hero min-h-screen bg-amber-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-2xl text-gray-600 mx-auto px-6 py-3 text-center"><%= t '.title' %></h1>
+      <h1 class="text-5xl font-app"><%= @quiz.title %></h1>
+      <%= render 'quiz_tops', { quiz_tops: @quiz_tops } %>
+      <p class="py-6"><%= @quiz.explain %></p>
+      <button class="btn btn-accent">スタート</button>
+    </div>
+    <div class="text-right">
+      <%= link_to edit_quiz_path(@quiz) do %>
+        <%= icon 'fa', 'pen' %>
+      <% end %>
+      <%= link_to quiz_path(@quiz), method: :delete do %>
+        <%= icon 'fas', 'trash' %>
+      <% end %>
     </div>
   </div>
 </div>

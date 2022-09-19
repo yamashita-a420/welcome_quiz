@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :questions do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
+  resource :quiz, only: %i[new create show edit update destroy]
   resource :mypage, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
   namespace :admin do

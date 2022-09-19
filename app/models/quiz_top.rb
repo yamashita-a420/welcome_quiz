@@ -1,3 +1,7 @@
 class QuizTop < ApplicationRecord
-  belongs_to :quiz
+  mount_uploader :photo, QuizTopUploader
+  belongs_to :user
+
+  validates :title, presence: true
+  validates :explain, presence: true
 end

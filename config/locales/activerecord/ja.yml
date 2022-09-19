@@ -5,6 +5,7 @@ ja:
       question: "質問"
       choice: "選択肢"
       quiz: "クイズ"
+      quiz_top: "クイズトップ"
       message: "メッセージ"
     attributes:
       user:
@@ -22,6 +23,11 @@ ja:
       choice:
         content: "内容"
         correct_answer: "正解/不正解"
+      quiz:
+        title: "タイトル"
+        explain: "説明"
+      quiz_top:
+        photo: "画像"
       message:
         name: "お名前"
         body: "メッセージ"

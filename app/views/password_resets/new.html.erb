@@ -3,8 +3,10 @@
     <p class="font-medium text-3xl text-gray-900 m-4"><%= t '.title' %></p>
 
     <%= form_with url: password_resets_path, local: true, method: :post do |f| %>
-      <%= f.label :email, User.human_attribute_name(:email) %>
-      <%= f.text_field :email, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full', class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+      <div>
+        <%= f.label :email, User.human_attribute_name(:email) %>
+        <%= f.text_field :email, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full', class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+      </div>
       <%= f.submit t('.password_reset'), class: 'btn btn-accent mb-5' %>
     <% end %>
     </div>

@@ -27,7 +27,7 @@
       </div>
       <div class="result-container title-font md: mb-0">
         <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.once_more')) %></h4>
-        <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.quizzes'), user_quizzes_path %></button>
+        <button class="text-orange-500 text-md font-bold"><%= link_to t('defaults.quizzes'), user_quiz_top_path(user_id: @user.id) %></button>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-class PhotoUploader < CarrierWave::Uploader::Base
+class QuizTopUploader < CarrierWave::Uploader::Base
   if Rails.env.production?
     storage :fog # 本番環境のみ
   else
@@ -10,7 +10,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    'photo_image.png'
+    'quiz_top_image.png'
   end
 
   def extension_whitelist

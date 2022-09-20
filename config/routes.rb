@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'qrcode', to: 'qrcodes#show'
 
   resources :users, only: %i[new create destroy] do
-    resources :quizzes, only: %i[index]
+    get 'quiz_top', to: 'quiz_tops#index'
     resources :take_quizzes, only: %i[index]
     post 'result', to: 'messages#new'
     post 'result_message', to: 'messages#create'
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :questions do
     resources :choices, only: %i[new create edit update destroy], shallow: true
   end
+  resource :quiz_top, only: %i[new create show edit update destroy]
   resource :mypage, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
   namespace :admin do

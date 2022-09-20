@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def separate_header
-    if ((controller_name == 'quizzes') && (action_name == 'index')) || controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
+    if ((controller_name == 'quiz_tops') && (action_name == 'index')) || ((controller_name == 'take_quizzes') && (action_name == 'index'))
       render 'shared/headers/header_quiz'
     elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
       render 'shared/headers/header_result'
@@ -32,7 +32,7 @@ module ApplicationHelper
   end
 
   def separate_footer
-    if ((controller_name == 'quizzes') && (action_name == 'index')) || controller_name.in?(['first_questions', 'second_questions', 'third_questions'])
+    if ((controller_name == 'quiz_tops') && (action_name == 'index')) || ((controller_name == 'take_quizzes') && (action_name == 'index'))
       render 'shared/footers/footer_quiz'
     elsif (controller_name == 'messages') && action_name.in?(['new', 'show'])
       render 'shared/footers/footer_result'

@@ -15,7 +15,7 @@
             <!-- Navbar menu content here -->
             <li><%= link_to t('defaults.new_question'), new_question_path %></li>
             <li><%= link_to t('defaults.questions'), questions_path %></li>
-            <li><%= link_to t('defaults.quizzes'), user_quizzes_path(user_id: current_user.id) %></li>
+            <li><%= link_to t('defaults.quizzes'), user_quiz_top_path(user_id: current_user.id) %></li>
             <li><%= link_to t('defaults.mypage'), mypage_path %></li>
             <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
           </ul>
@@ -30,7 +30,7 @@
         <!-- Sidebar content here -->
         <li><%= link_to t('defaults.new_question'), new_question_path %></li>
         <li><%= link_to t('defaults.questions'), questions_path %></li>
-        <li><%= link_to t('defaults.quizzes'), user_quizzes_path(user_id: current_user.id) %></li>
+        <li><%= link_to t('defaults.quizzes'), user_quiz_top_path(user_id: current_user.id) %></li>
         <li><%= link_to t('defaults.mypage') %></li>
         <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
       </ul>

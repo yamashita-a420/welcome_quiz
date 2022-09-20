@@ -1,0 +1,17 @@
+<div class="hero min-h-screen bg-amber-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-app py-6"><%= @quiz_top.title %></h1>
+      <%= image_tag @quiz_top.photo.url, class: 'card-img-top img-fluid m-auto', size: '300x300' %>
+      <p class="px-24 py-6"><%= @quiz_top.explain %></p>
+      <% if @user.questions.count >= 3 %>
+        <%= button_to 'スタート', user_take_quizzes_path(user_id: @user.id), class: "btn btn-accent w-1/3 m-auto", method: :get %>
+      <% else %>
+        <p class="py-6"><%= simple_format(t('.no_quiz')) %></p>
+        <button class="btn btn-primary w-1/3 m-auto mt-5">
+          <%= link_to t('defaults.new_question'), new_question_path %>
+        </button>
+      <% end %>
+    </div>
+  </div>
+</div>

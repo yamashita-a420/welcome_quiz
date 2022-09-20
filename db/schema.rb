@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_12_142407) do
+ActiveRecord::Schema.define(version: 2022_09_15_042413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 2022_09_12_142407) do
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
+  create_table "quiz_tops", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title", default: "Welcome Quiz", null: false
+    t.string "explain", default: "ようこそ！　ささやかですが　クイズをご用意しました　お楽しみ頂けますと幸いです", null: false
+    t.string "photo"
+    t.uuid "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_quiz_tops_on_user_id"
+  end
+
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -64,4 +74,5 @@ ActiveRecord::Schema.define(version: 2022_09_12_142407) do
   add_foreign_key "choices", "questions"
   add_foreign_key "messages", "users"
   add_foreign_key "questions", "users"
+  add_foreign_key "quiz_tops", "users"
 end

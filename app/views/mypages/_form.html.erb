@@ -1,9 +1,13 @@
 <%= form_with model: @user, url: mypage_path do |f| %>
   <%= render 'shared/error_message', object: @user %>
 
-  <%= f.label :name, User.human_attribute_name(:name) %>
-  <%= f.text_field :name, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+  <div>
+    <%= f.label :name, User.human_attribute_name(:name) %>
+    <%= f.text_field :name, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+  </div>
+  <div>
   <%= f.label :email, User.human_attribute_name(:email) %>
   <%= f.text_field :email, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+  </div>
   <%= f.submit t('defaults.update'), class:'btn btn-accent mb-5' %>
 <% end %>

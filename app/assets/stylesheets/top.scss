@@ -1,19 +1,19 @@
 .top-wrapper {
   background-image: image-url('top_photos.jpg');
-  background-color: rgba(209, 174, 21, 0.6);
+  background-color: rgba(245, 243, 242, 0.8);
   background-blend-mode: hard-light;
   background-position: right;
   background-size: cover;
   position: relative;
   height: 64vh;
-  margin-bottom: 5%;
 
   @media screen and (max-width: 767px) {
     height: calc(64vh);
   }
   .top-body {
-    background-color: rgba(245, 243, 242, 0.5);
     font-family: 'さわらびゴシック';
+    background-color: rgba(245, 243, 242, 0.8);
+    width: 50%;
   }
 }
 .top-wrapper::before {

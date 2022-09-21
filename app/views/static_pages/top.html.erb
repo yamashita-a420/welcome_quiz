@@ -1,46 +1,65 @@
-<section class="bg-hero-pattern text-gray-900 body-font">
-  <div class="top-wrapper">
-    <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
-      <div class="text-center lg:w-2/3 w-full">
-        <h2 class="text-2xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.catch')) %></h4>
-        <h4 class="text-xl text-base-100 mx-auto mt-6 px-6 py-3"><%= simple_format(t('.explain')) %></h4>
-        <div class="flex flex-col justify-center items-center">
-          <button class="flex justify-center top-btn transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
-            <%= link_to t('defaults.login'), login_path %>
-          </button>
-        </div>
+<% set_meta_tags site: '' %>
+<section class="text-gray-600 body-font">
+  <div class="top-wrapper mx-auto flex justify-center items-center text-center content-around">
+    <div class="top-body max-w-md p-10">
+      <h1 class="mb-5 text-3xl font-bold"><%= simple_format(t('.catch')) %></h1>
+      <p class="mb-5"><%= simple_format(t('.explain1')) %></p>
+      <p class="mb-5"><%= simple_format(t('.explain2')) %></p>
+      <%= link_to t('defaults.login'), login_path, class: 'btn btn-primary btn-lg text-white mt-5' %>
+    </div>
+  </div>
+  <h1 class="text-3xl text-center pt-16 pb-2">こんな使い方ができます</h1>
+  <div class="flex flex-wrap justify-center items-center mb-11 p-5">
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">結婚式へ招待したゲストへ</h2>
+        <figure class="px-10 py-2">
+          <%= image_tag 'wedding_party.jpg', size: '160x160' %>
+        </figure>
+        <p>新郎新婦の写真<br/>×<br/>思い出に関係するクイズ<br/>||<br/>ご縁をより深める</p>
+      </div>
+    </div>
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">お客様の待ち時間に</h2>
+        <figure class="px-10 py-2">
+          <%= image_tag 'chair.png', size: '160x160' %>
+        </figure>
+        <p>お店・商品の写真<br/>×<br/>まめ知識や特色のクイズ<br/>||<br/>愛着をお持ちいただく</p>
       </div>
     </div>
   </div>
-  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">クイズをつくってみる</h2>
-        <p>クイズのつくり方・完成イメージを確認<br/>※ログイン不要です<br/>※準備中です</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">クイズをつくってみる</button>
-        </div>
+  <div class="bg-neutral-200">
+  <h1 class="text-3xl text-center pt-16 pb-2">機能のご紹介</h1>
+  <div class="flex flex-wrap justify-center items-center pb-16 px-5 pt-5">
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">オリジナルクイズを作成</h2>
+        <p>スマホで写真を選んで<br/>空き時間で完成</p>
       </div>
     </div>
-    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">クイズにチャレンジ</h2>
-        <p>ログイン後<br/>クイズを３問以上つくると<br/>クイズに挑戦できます</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">ログイン</button>
-        </div>
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">３問ずつ出題</h2>
+        <p>アクセスする度に<br/>クイズをランダム表示</p>
       </div>
     </div>
-    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">二次元バーコードを印刷</h2>
-        <p>スマホを使って、クイズに参加してもらおう</p>
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">メッセージ機能</h2>
+        <p>ゲストからの<br/>ひとことメッセージを受信</p>
       </div>
     </div>
-    <div class="card w-96 bg-base-100 mt-5 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">メッセージをもらおう</h2>
-        <p>クイズが終わったら<br/>簡単なメッセージフォームが表示されます<br/></p>
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">２次元バーコード出力</h2>
+        <p>クイズのスタート画面へ<br/>さっとアクセス</p>
+      </div>
+    </div>
+    <div class="card w-96 m-2 bg-neutral-100 shadow-xl">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">SNSシェア機能</h2>
+        <p>クイズ終了後、シェアボタンの<br/>表示・非表示が選べる</p>
       </div>
     </div>
   </div>

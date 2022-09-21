@@ -10,10 +10,12 @@ ja:
     edit: "編集"
     destroy: "削除"
     update: "更新"
-    questions: "クイズ一覧"
     mypage: "マイページ"
-    new_question: "クイズをつくる"
-    quizzes: "チャレンジする"
+    new_question: "つくる"
+    questions: "見る"
+    quizzes: "解く"
+    messages_index: "メッセージ一覧"
+    set_quiz_top: "クイズ画面・シェア設定"
     preview: "プレビュー画面"
     qrcode: "２次元バーコード"
     message:
@@ -28,8 +30,9 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      catch: "写真をクイズにして<br/>あなたのストーリーを<br/>もっと伝えませんか？"
-      explain: "オリジナルのクイズ３つを<br/>ランダム表示！<br/>ゲストの待ち時間に<br/>話のタネを提供しよう"
+      catch: "写真クイズで<br/>おもてなし"
+      explain1: "飾った写真に<br/>クイズを添えて"
+      explain2: "ゲスト参加型の<br/>お出迎え"
       try: "クイズをつくってみる<br/>※準備中です"
   users:
     new:
@@ -136,7 +139,7 @@ ja:
       once_more: "＼もう一度挑戦する方はこちら／"
   qrcodes:
     show:
-      title: "クイズ<br/>二次元バーコード"
+      title: "クイズ<br/>２次元バーコード"
       copyright: "© Welcome Quiz Maker"
       usage: "印刷してご活用ください"
       usage2: "読み取りに必要ですので<br/>4~5mmの余白を確保してください"

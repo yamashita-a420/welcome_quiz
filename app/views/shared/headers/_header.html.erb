@@ -1,4 +1,4 @@
-<header class="bg-amber-200 text-gray-600 body-font">
+<header class="bg-primary text-gray-600 body-font">
   <div class="drawer">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
@@ -16,8 +16,16 @@
             <li><%= link_to t('defaults.new_question'), new_question_path %></li>
             <li><%= link_to t('defaults.questions'), questions_path %></li>
             <li><%= link_to t('defaults.quizzes'), user_quiz_top_path(user_id: current_user.id) %></li>
-            <li><%= link_to t('defaults.mypage'), mypage_path %></li>
-            <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
+            <li><%= link_to t('defaults.messages_index'), messages_path %></li>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost font-medium text-base">アカウント設定</label>
+              <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                <li><%= link_to t('defaults.set_quiz_top'), quiz_top_path %></li>
+                <li><%= link_to t('defaults.qrcode'), qrcode_path %></li>
+                <li><%= link_to t('defaults.mypage'), mypage_path %></li>
+                <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>
@@ -31,8 +39,16 @@
         <li><%= link_to t('defaults.new_question'), new_question_path %></li>
         <li><%= link_to t('defaults.questions'), questions_path %></li>
         <li><%= link_to t('defaults.quizzes'), user_quiz_top_path(user_id: current_user.id) %></li>
-        <li><%= link_to t('defaults.mypage') %></li>
-        <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
+        <li><%= link_to t('defaults.messages_index'), messages_path %></li>
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost font-medium text-base">アカウント設定</label>
+          <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52">
+            <li><%= link_to t('defaults.set_quiz_top'), quiz_top_path %></li>
+            <li><%= link_to t('defaults.qrcode'), qrcode_path %></li>
+            <li><%= link_to t('defaults.mypage'), mypage_path %></li>
+            <li><%= link_to t('defaults.logout'), logout_path, method: :delete %></li>
+          </ul>
+        </div>
       </ul>
     </div>
   </div>

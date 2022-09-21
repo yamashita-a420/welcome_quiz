@@ -4,6 +4,6 @@ class QrcodesController < ApplicationController
   require 'chunky_png'
 
   def show
-    @content = "https://welcome-quiz-maker.herokuapp.com/users/#{current_user.id}/quizzes"
+    @content = "https://welcome-quiz-maker.com/users/#{current_user.id}/quizzes"
   end
 end

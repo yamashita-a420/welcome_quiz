@@ -6,7 +6,7 @@
     <%= f.text_field :title, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
   </div>
   <div>
-    <%= f.label :photo %></br>
+    <%= f.label :photo, class: 'block' %>
     <%= f.file_field :photo, accept: 'image/*', id: 'action-button', class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
     <%= f.hidden_field :photo_cache %>
   </div>

@@ -13,11 +13,62 @@ class User < ApplicationRecord
 
   enum role: { general: 0, admin: 1 }
 
-  after_validation :set_quiz_top, on: [ :create ]
+  after_create :set_top_and_quizzes
 
   private
 
-  def set_quiz_top
+  def set_top_and_quizzes
     self.quiz_top = QuizTop.create
+    self.questions.create([
+      {
+        content: 'ここはどこでしょう？',
+        comment: '記念日に行きました',
+        level: 0,
+        choices_attributes: [
+          {
+            content: '京都',
+            correct_answer: 1,
+          },
+          {
+            content: '横浜',
+            correct_answer: 0,
+          },
+        ],
+      },
+      {
+        content: 'おすすめの名物はなんでしょう？',
+        comment: '甘すぎなくて美味しいです',
+        level: 1,
+        choices_attributes: [
+          {
+            content: 'どら焼き',
+            correct_answer: 1,
+          },
+          {
+            content: 'たい焼き',
+            correct_answer: 0,
+          },
+        ],
+      },
+      {
+        content: 'なにをしたでしょう？',
+        comment: '翌日足が痛かったです',
+        level: 2,
+        choices_attributes: [
+          {
+            content: '散策',
+            correct_answer: 0,
+          },
+          {
+            content: 'サイクリング',
+            correct_answer: 0,
+          },
+          {
+            content: '座禅',
+            correct_answer: 1,
+          },
+        ],
+      },
+    ])
   end
 end

@@ -30,10 +30,8 @@ ja:
   static_pages:
     top:
       title: "Welcome Quiz Maker"
-      catch: "写真クイズで<br/>おもてなし"
-      explain1: "飾った写真に<br/>クイズを添えて"
-      explain2: "ゲスト参加型の<br/>お出迎え"
-      try: "クイズをつくってみる<br/>※準備中です"
+      catch: "オリジナルクイズで<br/>おもてなし"
+      explain1: "ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです"
   users:
     new:
       title: "ユーザー登録"
@@ -129,6 +127,7 @@ ja:
       send: "送信"
       share: "＼結果をシェア！／"
       once_more: "＼もう一度挑戦する方はこちら／"
+      try_again: "スタート画面"
     show:
       message_sent: "メッセージ頂戴しました！<br/>ありがとうございました"
       title: "Check the answer!"
@@ -137,6 +136,7 @@ ja:
       enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
       share: "＼結果をシェア！／"
       once_more: "＼もう一度挑戦する方はこちら／"
+      try_again: "スタート画面"
   qrcodes:
     show:
       title: "クイズ<br/>２次元バーコード"

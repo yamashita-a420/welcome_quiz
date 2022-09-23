@@ -31,10 +31,7 @@ ja:
     top:
       title: "Welcome Quiz Maker"
       catch: "オリジナルクイズで<br/>おもてなし"
-      explain4: "ウェイティングタイムを<br/>シンキングタイムに！"
       explain1: "ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです"
-      explain3: "飾った写真に<br/>クイズを添えて"
-      try: "クイズをつくってみる<br/>※準備中です"
   users:
     new:
       title: "ユーザー登録"

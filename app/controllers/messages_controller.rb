@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     @choice_2 = Choice.find(params[:choice_2])
     @choice_3 = Choice.find(params[:choice_3])
     #正解数
-    @score = [@choice_1, @choice_2, @choice_3].map{|x| x.scoring(@choice_1)}.map(&:to_i).sum
+    @score = [@choice_1, @choice_2, @choice_3].map{|x| x.scoring(x)}.map(&:to_i).sum
   end
 
   def create

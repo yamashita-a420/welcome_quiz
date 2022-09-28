@@ -1,6 +1,16 @@
-<% if choice.correct_answer == "correct" %>
-  <h3 class="text-center text-3xl text-orange-500 m-2">
+<% if choice.correct_answer == "correct" && choice.in?([@choice_1, @choice_2, @choice_3]) %>
+  <h3 class="text-center text-3xl text-red-500 m-2">
     <%= icon 'far', 'circle' %>
+    <%= choice.content %>
+  </h3>
+<% elsif choice.correct_answer == "correct" %>
+  <h3 class="text-center text-3xl m-2">
+    <%= icon 'far', 'circle' %>
+    <%= choice.content %>
+  </h3>
+<% elsif choice.correct_answer == "incorrect" && choice.in?([@choice_1, @choice_2, @choice_3]) %>
+  <h3 class="text-center text-xl text-red-500 m-1">
+    <%= icon 'far', 'x' %>
     <%= choice.content %>
   </h3>
 <% else %>

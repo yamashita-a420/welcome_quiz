@@ -11,10 +11,7 @@
       <button class="btn btn-accent w-1/3 m-auto">スタート</button>
       <div class="py-6">
         <%= link_to edit_quiz_top_path(@quiz_top) do %>
-          <%= icon 'fa', 'pen', class: "pr-3" %>
-        <% end %>
-        <%= link_to quiz_top_path(@quiz_top), method: :delete do %>
-          <%= icon 'fas', 'trash' %>
+          <%= icon 'fa', 'pen' %>
         <% end %>
       </div>
     </div>

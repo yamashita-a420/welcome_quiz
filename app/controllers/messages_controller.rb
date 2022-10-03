@@ -38,8 +38,8 @@ class MessagesController < ApplicationController
 
   def destroy
     @message = current_user.messages.find(params[:format])
-    @message.destroy
-    redirect_to messages_url, notice: "Create question was successfully destroyed."
+    @message.destroy!
+    redirect_to messages_url, success: t('defaults.message.deleted', item: Message.model_name.human)
   end
 
   private

@@ -1,154 +1,144 @@
 ja:
   defaults:
-    top: "Top"
-    login: "ログイン"
-    register: "登録"
-    logout: "ログアウト"
-    password_forget: "パスワードをお忘れの方はこちら"
-    password_reset: "パスワードリセット手順を送信しました"
-    show: "詳細"
-    edit: "編集"
-    destroy: "削除"
-    update: "更新"
-    mypage: "マイページ"
-    new_question: "つくる"
-    questions: "見る"
-    quizzes: "解く"
-    messages_index: "メッセージ一覧"
-    set_quiz_top: "クイズ画面・シェア設定"
-    preview: "プレビュー画面"
-    qrcode: "２次元バーコード"
+    top: 'Top'
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    password_forget: 'パスワードをお忘れの方はこちら'
+    password_reset: 'パスワードリセット手順を送信しました'
+    show: '詳細'
+    edit: '編集'
+    destroy: '削除'
+    update: '更新'
+    mypage: 'マイページ'
+    new_question: 'つくる'
+    questions: '見る'
+    quizzes: '解く'
+    messages_index: 'メッセージ一覧'
+    set_quiz_top: 'クイズ画面・シェア設定'
+    preview: 'プレビュー画面'
+    qrcode: '２次元バーコード'
     message:
-      require_login: "ログインしてください"
-      created: "%{item}を作成しました"
-      not_created: "%{item}を作成できませんでした"
-      deleted: "%{item}を削除しました"
-      updated: "%{item}を更新しました"
-      not_updated: "%{item}を更新できませんでした"
-      delete_confirm: "削除しますか？"
-      not_authorized: "権限がありません"
+      require_login: 'ログインしてください'
+      created: '%{item}を作成しました'
+      not_created: '%{item}を作成できませんでした'
+      deleted: '%{item}を削除しました'
+      updated: '%{item}を更新しました'
+      not_updated: '%{item}を更新できませんでした'
+      delete_confirm: '削除しますか？'
+      not_authorized: '権限がありません'
   static_pages:
     top:
-      title: "Welcome Quiz Maker"
-      catch: "オリジナルクイズで<br/>おもてなし"
-      explain1: "ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです"
+      title: 'Welcome Quiz Maker'
+      catch: 'オリジナルクイズで<br/>おもてなし'
+      explain1: 'ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです'
   users:
     new:
-      title: "ユーザー登録"
-      to_login_page: "ログインページへ"
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
     create:
-      success: "ユーザー登録が完了しました"
-      fail: "ユーザー登録に失敗しました"
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
     destroy:
-      success: "退会しました。ご利用ありがとうございました"
+      success: '退会しました。ご利用ありがとうございました'
   user_sessions:
     new:
-      title: "ログイン"
-      to_register_page: "登録ページへ"
-      password_forget: "パスワードをお忘れの方はこちら"
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
     create:
-      success: "ログインしました"
-      fail: "ログインに失敗しました"
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
     destroy:
-      success: "ログアウトしました"
+      success: 'ログアウトしました'
   password_resets:
     new:
-      title: "パスワードリセット申請"
-      password_reset: "パスワードリセット"
+      title: 'パスワードリセット申請'
+      password_reset: 'パスワードリセット'
     create:
-      success: "パスワードリセット手順を送信しました"
+      success: 'パスワードリセット手順を送信しました'
     edit:
-      title: "パスワードリセット"
+      title: 'パスワードリセット'
     update:
-      success: "パスワードを変更しました"
-      fail: "パスワードの変更に失敗しました"
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
   mypages:
     show:
-      title: "マイページ"
-      messages_index: "メッセージ一覧"
-      edit: "プロフィール編集"
+      title: 'マイページ'
+      edit: 'プロフィール編集'
     edit:
-      title: "プロフィール編集"
-      title2: "退会"
-      about_delete: "退会時に削除される内容"
-      content: "・ニックネーム<br/>・メールアドレス<br/>・作成したクイズ（画像・文章）<br/>・届いたメッセージ"
-      withdrawal: "同意して退会"
+      title: 'プロフィール編集'
+      title2: '退会'
+      about_delete: '退会時に削除される内容'
+      content: '・ニックネーム<br/>・メールアドレス<br/>・作成したクイズ（画像・文章）<br/>・届いたメッセージ'
+      withdrawal: '同意して退会'
   questions:
     index:
-      title: "クイズ一覧"
-      no_result: "質問がありません"
-      level: "難易度：%{level}"
+      title: 'クイズ一覧'
+      no_result: '質問がありません'
+      level: '難易度：%{level}'
     show:
-      title: "クイズ詳細"
+      title: 'クイズ詳細'
     new:
-      title: "クイズをつくる"
-      choices: "選択肢"
+      title: 'クイズをつくる'
+      choices: '選択肢'
     edit:
-      title: "クイズ編集"
+      title: 'クイズ編集'
   quiz_tops:
     index:
-      welcome_message: "ようこそ！"
-      no_quiz: "クイズを３問以上つくると<br/>スタートボタンが表示されます"
-      button: "スタート"
+      welcome_message: 'ようこそ！'
+      no_quiz: 'クイズを３問以上つくると<br/>スタートボタンが表示されます'
+      button: 'スタート'
     new:
-      title: "クイズトップ作成"
+      title: 'クイズトップ作成'
     show:
-      title: "クイズトップ詳細"
+      title: 'クイズトップ詳細'
     edit:
-      title: "クイズトップ編集"
-  first_questions:
-    show:
-      title: "Question 1"
-  second_questions:
-    show:
-      title: "Question 2"
-  third_questions:
-    show:
-      title: "Question 3"
+      title: 'クイズトップ編集'
   take_quizzes:
     index:
-      title_1: "Question 1"
-      title_2: "Question 2"
-      title_3: "Question 3"
+      title_1: 'Question 1'
+      title_2: 'Question 2'
+      title_3: 'Question 3'
   messages:
     index:
-      title: "メッセージ一覧"
-      no_message: "メッセージがありません"
+      title: 'メッセージ一覧'
+      no_message: 'メッセージがありません'
     new:
-      title: "Check the answer!"
-      score: "＼%{score}問正解／"
-      q: "Q"
-      thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
-      enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
-      message_please: "よろしければ 主催へひとこと<br/>おねがいします"
-      name: "お名前"
-      note: "※送信されるのは、お名前とメッセージのみです。<br/>正解数は送信しません。お気軽にどうぞ"
-      message_sent: "メッセージ頂戴しました！<br/>ありがとうございました"
-      send: "送信"
-      share: "＼結果をシェア！／"
-      once_more: "＼もう一度挑戦する方はこちら／"
-      try_again: "スタート画面"
+      title: 'Check the answer!'
+      score: '＼%{score}問正解／'
+      q: 'Q'
+      thanks_message: 'クイズにご参加いただき<br/>ありがとうございました！'
+      enjoy_message: 'ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください'
+      message_please: 'よろしければ 主催へひとこと<br/>おねがいします'
+      name: 'お名前'
+      note: '※送信されるのは、お名前とメッセージのみです。<br/>正解数は送信しません。お気軽にどうぞ'
+      message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
+      send: '送信'
+      share: '＼結果をシェア！／'
+      once_more: '＼もう一度挑戦する方はこちら／'
+      try_again: 'スタート画面'
     show:
-      message_sent: "メッセージ頂戴しました！<br/>ありがとうございました"
-      title: "Check the answer!"
-      score: "＼%{score}問正解／"
-      thanks_message: "クイズにご参加いただき<br/>ありがとうございました！"
-      enjoy_message: "ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください"
-      share: "＼結果をシェア！／"
-      once_more: "＼もう一度挑戦する方はこちら／"
-      try_again: "スタート画面"
+      message_sent: 'メッセージ頂戴しました！<br/>ありがとうございました'
+      title: 'Check the answer!'
+      score: '＼%{score}問正解／'
+      thanks_message: 'クイズにご参加いただき<br/>ありがとうございました！'
+      enjoy_message: 'ランダムに出題されるので<br/>ほかのゲストと見せ合って<br/>お楽しみください'
+      share: '＼結果をシェア！／'
+      once_more: '＼もう一度挑戦する方はこちら／'
+      try_again: 'スタート画面'
   qrcodes:
     show:
-      title: "クイズ<br/>２次元バーコード"
-      copyright: "© Welcome Quiz Maker"
-      usage: "印刷してご活用ください"
-      usage2: "読み取りに必要ですので<br/>4~5mmの余白を確保してください"
+      title: 'クイズ<br/>２次元バーコード'
+      copyright: '© Welcome Quiz Maker'
+      usage: '印刷してご活用ください'
+      usage2: '読み取りに必要ですので<br/>4~5mmの余白を確保してください'
   helpers:
-    app: "Welcome Quiz Maker"
-    quiz: "Welcome Quiz"
+    app: 'Welcome Quiz Maker'
+    quiz: 'Welcome Quiz'
     submit:
-      create: "登録する"
-      update: "更新する"
-      submit: "保存する"
+      create: '登録する'
+      update: '更新する'
+      submit: '保存する'
       message:
-        create: "送る"
+        create: '送る'

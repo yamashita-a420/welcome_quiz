@@ -20,10 +20,12 @@
     <% if @message %>
       <div class="after-sent-message">
         <div class="bg-base-100">
-          <div class="result-container title-font md: mb-0">
-            <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.share')) %></h4>
-            <%= render 'twitter_point', user: @user, score: @score %>
-          </div>
+          <% if @user.quiz_top.twitter_share %>
+            <div class="result-container title-font md: mb-0">
+              <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.share')) %></h4>
+              <%= render 'twitter_point', user: @user, score: @score %>
+            </div>
+          <% end %>
           <div class="result-container title-font md: mb-0">
             <h4 class="text-md mx-auto px-6 py-3 text-center"><%= simple_format(t('.once_more')) %></h4>
             <button class="text-orange-500 text-md font-bold"><%= link_to t('.try_again'), user_quiz_top_path(user_id: @user.id) %></button>

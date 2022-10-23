@@ -7,7 +7,7 @@
   </div>
   <div>
     <%= f.label :photo, class: 'block' %>
-    <%= f.file_field :photo, accept: 'image/*', id: 'action-button', class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+    <%= f.file_field :photo, accept: 'image/*', id: 'action-button' %>
     <%= f.hidden_field :photo_cache %>
   </div>
   <div class='mt-3 mb-3'>
@@ -17,7 +17,20 @@
   </div>
   <div>
     <%= f.label :explain %>
-    <%= f.text_field :explain, class: 'input input-bordered w-full mb-3 px-4 py-3 rounded-full' %>
+    <%= f.text_area :explain, class: 'textarea w-full mb-3 px-4 py-3 rounded-full' %>
+  </div>
+  <div class='mt-3 mb-6'>
+    Twitterシェアボタン
+    <ul>
+      <li>
+        <%= f.radio_button :twitter_share, 'true', class: 'radio' %>
+        <%= f.label :twitter_true, '表示する', class: 'text-center' %>
+      </li>
+      <li>
+        <%= f.radio_button :twitter_share, 'false', class: 'radio' %>
+        <%= f.label :twitter_false, '表示しない', class: 'text-center' %>
+      </li>
+    </ul>
   </div>
   <%= f.submit class:'btn btn-accent mb-5' %>
 <% end %>

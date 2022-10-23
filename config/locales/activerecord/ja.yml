@@ -4,7 +4,7 @@ ja:
       user: "ユーザー"
       question: "質問"
       choice: "選択肢"
-      quiz_top: "クイズトップ"
+      quiz_top: "クイズトップ・シェア設定"
       message: "メッセージ"
     attributes:
       user:
@@ -26,12 +26,12 @@ ja:
         title: "タイトル"
         photo: "画像"
         explain: "説明"
+        twitter_share: "Twitterシェア設定"
       message:
         name: "お名前"
         body: "メッセージ"
     errors:
       messages:
-
   enum:
     question:
       level:

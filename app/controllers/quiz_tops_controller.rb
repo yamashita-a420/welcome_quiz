@@ -46,6 +46,6 @@ class QuizTopsController < ApplicationController
   end
 
   def quiz_top_params
-    params.require(:quiz_top).permit(:title, :explain, :photo, :photo_cache).merge(user_id: current_user.id)
+    params.require(:quiz_top).permit(:title, :explain, :photo, :photo_cache, :twitter_share).merge(user_id: current_user.id)
   end
 end

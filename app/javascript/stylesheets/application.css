@@ -28,7 +28,7 @@
 }
 
 .common_container {
-  @apply container p-5 mx-auto;
+  @apply container max-w-max p-5 mx-auto;
 }
 
 .quiz-container {

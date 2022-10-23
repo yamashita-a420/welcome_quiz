@@ -89,12 +89,10 @@ ja:
       welcome_message: 'ようこそ！'
       no_quiz: 'クイズを３問以上つくると<br/>スタートボタンが表示されます'
       button: 'スタート'
-    new:
-      title: 'クイズトップ作成'
     show:
-      title: 'クイズトップ詳細'
+      title: 'クイズ画面・シェア設定'
     edit:
-      title: 'クイズトップ編集'
+      title: 'クイズ画面・シェア設定編集'
   take_quizzes:
     index:
       title_1: 'Question 1'
@@ -142,3 +140,5 @@ ja:
       submit: '保存する'
       message:
         create: '送る'
+    "true": '表示する'
+    "false": '表示しない'

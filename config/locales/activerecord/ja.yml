@@ -4,7 +4,7 @@ ja:
       user: "ユーザー"
       question: "質問"
       choice: "選択肢"
-      quiz_top: "クイズトップ"
+      quiz_top: "クイズトップ・シェア設定"
       message: "メッセージ"
     attributes:
       user:

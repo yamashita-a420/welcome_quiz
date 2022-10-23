@@ -26,12 +26,12 @@ ja:
         title: "タイトル"
         photo: "画像"
         explain: "説明"
+        twitter_share: "Twitterシェア設定"
       message:
         name: "お名前"
         body: "メッセージ"
     errors:
       messages:
-
   enum:
     question:
       level:

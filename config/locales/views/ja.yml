@@ -92,7 +92,7 @@ ja:
     new:
       title: 'クイズトップ作成'
     show:
-      title: 'クイズトップ詳細'
+      title: 'クイズ画面・シェア設定'
     edit:
       title: 'クイズトップ編集'
   take_quizzes:
@@ -142,3 +142,5 @@ ja:
       submit: '保存する'
       message:
         create: '送る'
+    "true": '表示する'
+    "false": '表示しない'

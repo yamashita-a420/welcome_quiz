@@ -4,4 +4,5 @@ class QuizTop < ApplicationRecord
 
   validates :title, presence: true
   validates :explain, presence: true
+  validates :twitter_share, presence: true
 end

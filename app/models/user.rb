@@ -15,6 +15,14 @@ class User < ApplicationRecord
 
   after_create :set_top_and_quizzes
 
+  def self.guest
+    find_or_create_by!(email: "guest@example.com") do |user|
+      user.name = 'ゲストユーザー'
+      user.password = ENV['SECRETS_TEST_ACCOUNT_PASS']
+      user.password_confirmation = ENV['SECRETS_TEST_ACCOUNT_PASS']
+    end
+  end
+
   private
 
   def set_top_and_quizzes

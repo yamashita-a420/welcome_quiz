@@ -32,6 +32,7 @@ ja:
         body: "メッセージ"
     errors:
       messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
   enum:
     question:
       level:

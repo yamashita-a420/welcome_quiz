@@ -6,9 +6,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
     if @user.save
-      redirect_back_or_to login_path, success: t('.success')
+      auto_login(@user)
+      redirect_back_or_to questions_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new

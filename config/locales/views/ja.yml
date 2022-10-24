@@ -18,6 +18,7 @@ ja:
     set_quiz_top: 'クイズ画面・シェア設定'
     preview: 'プレビュー画面'
     qrcode: '２次元バーコード'
+    guest_login: 'ゲストログイン'
     message:
       require_login: 'ログインしてください'
       created: '%{item}を作成しました'
@@ -31,13 +32,13 @@ ja:
     top:
       title: 'Welcome Quiz Maker'
       catch: 'オリジナルクイズで<br/>おもてなし'
-      explain1: 'ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです'
+      explain: 'ユーザーがゲストに対して<br/>話のタネを提供したり<br/>情報を発信できるサービスです'
   users:
     new:
       title: 'ユーザー登録'
       to_login_page: 'ログインページへ'
     create:
-      success: 'ユーザー登録が完了しました'
+      success: 'ユーザー登録が完了しました。クイズを３問自動作成しました。'
       fail: 'ユーザー登録に失敗しました'
     destroy:
       success: '退会しました。ご利用ありがとうございました'
@@ -51,6 +52,8 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+    guest_login:
+      success: 'ゲストとしてログインしました'
   password_resets:
     new:
       title: 'パスワードリセット申請'
@@ -65,7 +68,7 @@ ja:
   mypages:
     show:
       title: 'マイページ'
-      edit: 'プロフィール編集'
+      edit: 'プロフィール編集・退会'
     edit:
       title: 'プロフィール編集'
       title2: '退会'

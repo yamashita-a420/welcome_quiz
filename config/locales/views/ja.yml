@@ -31,7 +31,7 @@ ja:
     top:
       title: 'Welcome Quiz Maker'
       catch: 'オリジナルクイズで<br/>おもてなし'
-      explain: 'ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです'
+      explain: 'ユーザーがゲストに対して<br/>話のタネを提供したり<br/>情報を発信できるサービスです'
       guest_login: 'ゲストログイン'
   users:
     new:

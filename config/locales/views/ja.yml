@@ -31,7 +31,8 @@ ja:
     top:
       title: 'Welcome Quiz Maker'
       catch: 'オリジナルクイズで<br/>おもてなし'
-      explain1: 'ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです'
+      explain: 'ウェルカムクイズメーカーは<br/>思い出の写真を使って<br/>オリジナルクイズを<br/>スマホで簡単に<br/>作成できるサービスです'
+      guest_login: 'ゲストログイン'
   users:
     new:
       title: 'ユーザー登録'
@@ -51,6 +52,8 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+    guest_login:
+      success: 'ゲストとしてログインしました'
   password_resets:
     new:
       title: 'パスワードリセット申請'

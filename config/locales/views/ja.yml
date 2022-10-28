@@ -33,6 +33,7 @@ ja:
       title: 'Welcome Quiz Maker'
       catch: 'オリジナルクイズで<br/>おもてなし'
       explain: 'ユーザーがゲストに対して<br/>話のタネを提供したり<br/>情報を発信できるサービスです'
+      take_quiz: 'クイズを解く'
   users:
     new:
       title: 'ユーザー登録'

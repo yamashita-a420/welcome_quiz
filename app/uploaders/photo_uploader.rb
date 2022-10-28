@@ -1,4 +1,6 @@
 class PhotoUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
   if Rails.env.production?
     storage :fog # 本番環境のみ
   else
@@ -12,6 +14,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   def default_url
     'photo_image.png'
   end
+
+  process resize_to_fit: [500, 500]
 
   def extension_whitelist
     %w(jpg jpeg gif png)

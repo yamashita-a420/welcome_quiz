@@ -25,8 +25,8 @@
       <label for="my-drawer-3" class="drawer-overlay"></label>
       <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
         <!-- Sidebar content here -->
-        <li><%= link_to t('defaults.new_question'), new_question_path %></li>
         <li><%= link_to t('defaults.login'), login_path %></li>
+        <li><%= link_to t('defaults.guest_login'), guest_login_path, method: :post %></li>
       </ul>
     </div>
   </div>

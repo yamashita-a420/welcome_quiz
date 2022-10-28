@@ -2,12 +2,12 @@
   <%= render 'shared/error_message', object: @question %>
 
   <%= f.label :photo, class: 'block' %>
-  <%= f.file_field :photo, accept: 'image/*', id: 'action-button', class: 'input input-bordered w-full mb-3 px-4 py-2 rounded-full' %>
+  <%= f.file_field :photo, accept: 'image/*', id: 'action-button' %>
   <%= f.hidden_field :photo_cache %>
-  <div class='mb-3'>
+  <div class='mt-3 mb-3'>
     <%= image_tag question.photo.url,
                   id: 'preview',
-                  size: '300x200',
+                  size: '300x300',
                   class: 'mx-auto' %>
   </div>
   <div>
